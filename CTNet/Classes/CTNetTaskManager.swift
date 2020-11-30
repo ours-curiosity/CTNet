@@ -8,8 +8,8 @@
 import Foundation
 public struct CTNetError
 {
-    var msg:String
-    var code:Int
+    public var msg:String
+    public var code:Int
 }
 public class CTNetTaskManager{
     

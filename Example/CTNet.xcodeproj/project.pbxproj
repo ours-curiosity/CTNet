@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185A934E6E1C7B7DB7458EAA /* Pods_CTNet_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51045344C50F5119F0A86A3A /* Pods_CTNet_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,7 +27,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7036A0ECCF72E1DAA70B23F7 /* Pods-CTNet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNet_Example.debug.xcconfig"; path = "Target Support Files/Pods-CTNet_Example/Pods-CTNet_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7FC559F2C1ADB4B4294F8B6E /* Pods_CTNet_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTNet_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A05E96CDC5B51B7AE4A834D7 /* CTNet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CTNet.podspec; path = ../CTNet.podspec; sourceTree = "<group>"; };
+		A05E96CDC5B51B7AE4A834D7 /* CTNet.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CTNet.podspec; path = ../CTNet.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C1B6BBE0B3A82EDC753AE180 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DC455CBF7A613F39D8D72DAF /* Pods-CTNet_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNet_Tests.release.xcconfig"; path = "Target Support Files/Pods-CTNet_Tests/Pods-CTNet_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EBB5E4B1076EA1927548EF68 /* Pods-CTNet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNet_Example.release.xcconfig"; path = "Target Support Files/Pods-CTNet_Example/Pods-CTNet_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -39,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185A934E6E1C7B7DB7458EAA /* Pods_CTNet_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
