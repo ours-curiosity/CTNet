@@ -9,7 +9,7 @@ import Foundation
 
 public class CTNet{
     
-    static func request(url:String,
+    public static func request(url:String,
                         method: CTNetRequestMethod,
                         parameters: [String: Any],
                         level:Operation.QueuePriority = .normal,

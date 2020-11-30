@@ -19,7 +19,7 @@ public class CTNetConfigure{
     
     var debug = true
     
-    static let shared:CTNetConfigure = {
+    public static let shared:CTNetConfigure = {
         let configure = CTNetConfigure()
         return configure
     }()
