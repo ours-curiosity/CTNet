@@ -8,16 +8,16 @@
 import Foundation
 
 public class CTNetConfigure{
-    var host:String = ""
-    var port:String = ""
-    var timeout:Double = 20
-    var retryTimes:Int = 3
-    var autoCache:Bool = true
-    var maxConcurrentOperationCount:Int = 4
+    public var host:String = ""
+    public var port:String = ""
+    public var timeout:Double = 20
+    public var retryTimes:Int = 3
+    public var autoCache:Bool = true
+    public var maxConcurrentOperationCount:Int = 4
 
-    var headers: [String:String] = [:]
+    public var headers: [String:String] = [:]
     
-    var debug = true
+    public var debug = true
     
     public static let shared:CTNetConfigure = {
         let configure = CTNetConfigure()
