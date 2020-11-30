@@ -1,0 +1,6 @@
+framework module Pods_CTNet_Tests {
+  umbrella header "Pods-CTNet_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

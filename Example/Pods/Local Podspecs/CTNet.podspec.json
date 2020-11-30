@@ -1,0 +1,22 @@
+{
+  "name": "CTNet",
+  "version": "0.1.0",
+  "summary": "A short description of CTNet.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/tliens/CTNet",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "tliens": "maninios@163.com"
+  },
+  "source": {
+    "git": "https://github.com/tliens/CTNet.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CTNet/Classes/**/*"
+}
