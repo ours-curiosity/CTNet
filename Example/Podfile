@@ -7,9 +7,4 @@ source 'https://github.com/ours-curiosity/CTSpecs'
 target 'CTNet_Example' do
   pod 'CTNet', :path => '../'
 
-  target 'CTNet_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

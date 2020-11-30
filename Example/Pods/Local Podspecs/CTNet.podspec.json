@@ -1,9 +1,9 @@
 {
   "name": "CTNet",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A short description of CTNet.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/tliens/CTNet",
+  "homepage": "https://github.com/ours-curiosity/CTNet",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,18 @@
     "tliens": "maninios@163.com"
   },
   "source": {
-    "git": "https://github.com/tliens/CTNet.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/ours-curiosity/CTNet.git",
+    "tag": "0.2.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "CTNet/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "CTNet/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+      "~> 5.4.0"
+    ]
+  },
+  "swift_version": "5.0"
 }

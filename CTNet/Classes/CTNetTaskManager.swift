@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct CTNetError
+public struct CTNetError
 {
     var msg:String
     var code:Int

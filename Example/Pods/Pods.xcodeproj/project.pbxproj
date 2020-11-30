@@ -7,238 +7,373 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A56BBAF87084D97FD4BDF21A64D1279 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		1AD90A9E0D48AB35692105639F276B48 /* Pods-CTNet_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4CC02259DF02735579470D12668BA /* Pods-CTNet_Tests-dummy.m */; };
-		1ED1FC19BAEA42F33CC8DAA03B0953C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		29EDD2A74AB3E11B64B64AF6EEFFE5CD /* CTNet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE5D0784FE7126A8003F215A181C801 /* CTNet-dummy.m */; };
-		440BB7EA2574FDF6004DFE44 /* CTNetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB7E22574FDF6004DFE44 /* CTNetTest.swift */; };
-		440BB7EB2574FDF6004DFE44 /* CTNetTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB7E32574FDF6004DFE44 /* CTNetTaskManager.swift */; };
-		440BB7EC2574FDF6004DFE44 /* CTNetConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB7E42574FDF6004DFE44 /* CTNetConfigure.swift */; };
-		440BB7ED2574FDF6004DFE44 /* CTNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB7E52574FDF6004DFE44 /* CTNet.swift */; };
-		440BB7EE2574FDF6004DFE44 /* CTNetLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB7E62574FDF6004DFE44 /* CTNetLog.swift */; };
-		440BB7EF2574FDF6004DFE44 /* CTNetTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB7E72574FDF6004DFE44 /* CTNetTask.swift */; };
-		440BB7F02574FDF6004DFE44 /* CTNetTaskRetryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB7E82574FDF6004DFE44 /* CTNetTaskRetryManager.swift */; };
-		440BB7F12574FDF6004DFE44 /* CTNetSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB7E92574FDF6004DFE44 /* CTNetSupport.swift */; };
-		460871AC13EA9974BF0956DC0BDF51D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		52D5C577E7E16489247CC112C5ABFDEB /* CTNet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECDD0E54681EAD13E1CEEC9B9B5871EB /* CTNet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81897F9E04183A3F995F61ED67CA9343 /* Pods-CTNet_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 990341142D8B999E73949A533A38B217 /* Pods-CTNet_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F77CCDFD58CBD04EC9C4090BD773456 /* Pods-CTNet_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2F9331F219DCAF828DAADED1F42CC /* Pods-CTNet_Example-dummy.m */; };
-		F67337AF7DAB3FF8CEE8345E0D005CC2 /* Pods-CTNet_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3807EFCA25139FE80829CAFB48401FB3 /* Pods-CTNet_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		013BAC24F7AC722E59517CB110A9E685 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4388F96485F322CF010F9CA6AF089C46 /* HTTPMethod.swift */; };
+		06BB4323323D764B10B360C06865E95E /* CTNetConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5034539FD7A3ED7182A989C31C256DF /* CTNetConfigure.swift */; };
+		085AB83366A1DAF9B1D0CC87738C3A3F /* CTNet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 56449009EBE3526DEC79E590A3E77F71 /* CTNet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A1849775CF90D514963187D3A771CF8 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBFC4256A48F45E26B860D38479E52 /* Combine.swift */; };
+		0A900DF17E3B64F08AF673E9A0DDD697 /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F4F5D5DA538F51C4D4F27C9F64377 /* OperationQueue+Alamofire.swift */; };
+		1208E81DA8B532D0646D627B50290EB6 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349B2325F6647FEE3C9209201FF5D4C2 /* AFError.swift */; };
+		15FE7D23233397CD5FAC7441149DFA26 /* CTNetTaskRetryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB8C3C9ED09F4A3A08CE85F55CBB7B /* CTNetTaskRetryManager.swift */; };
+		19D605A3233499828FB6B790869F3E9C /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401A0C3C3516540407583753D10DEB2B /* NetworkReachabilityManager.swift */; };
+		1B894ADCF0B052DD066057E41768CBA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC44BC108255F6766BF5383BF088F46 /* Foundation.framework */; };
+		212EDC48B68107BEA9247F3464CE696E /* StringEncoding+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51515830AB9FE94E01DF6F48146153 /* StringEncoding+Alamofire.swift */; };
+		218C14EAE5AA31C30314AE0289B732A0 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D45A2AF061C99B2355F19EC47243D9 /* Protected.swift */; };
+		27760EFB79396C882A5B61FB1D1BF13B /* Pods-CTNet_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1E0A738124B924C63AE93CCBBED3 /* Pods-CTNet_Example-dummy.m */; };
+		27E59A11A2743B0595CDE3A08675EAE1 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABD9F54297FF27309F1F8A34F99417C /* DispatchQueue+Alamofire.swift */; };
+		2ED55AB207F984ABC94FDD3C583943CF /* CTNetTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C58E04AAE5320A672C0DB62565F24 /* CTNetTask.swift */; };
+		31B1E2C9FC5DF7B7BE9350E5E8F518CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC44BC108255F6766BF5383BF088F46 /* Foundation.framework */; };
+		381FF05F8B4F611EE9C2FDBE4457BB89 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF72312136F76CCB5AC50BCDD37ED4A2 /* SessionDelegate.swift */; };
+		45B8CC1C61E7A0BB28CFA8CE7C12FEBC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0440F4381D065FED6264EFBCDB7960 /* MultipartFormData.swift */; };
+		476D5F33E25386C60D6BD75C4FA97C67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC44BC108255F6766BF5383BF088F46 /* Foundation.framework */; };
+		47FDBBBD2704901588C3A7C56BBC502D /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B13480173106997D3F6538CDE3CD /* ServerTrustEvaluation.swift */; };
+		4AEC050FA7D5ED52FDA9DF50EA3560DF /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26220434118FCFC30E4850800AC3068 /* ParameterEncoder.swift */; };
+		5AB31C3753662AE2E0E671AE5D51B698 /* CTNetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEAF5CEAB549A05FB31E6E90D1A74C /* CTNetTest.swift */; };
+		5CA183C6E16B6597B70E56C763659AE3 /* CTNetTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5279D783D8E827548A073E3D14F7DDD /* CTNetTaskManager.swift */; };
+		614B7683A9CF8ABADBD865879446CF5C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FF301302A2A77E95697F2B5692FA5E /* Alamofire.framework */; };
+		6546D728B69398F93B506845141EBD61 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC45C560942C5BCAB401419728808D3 /* EventMonitor.swift */; };
+		666EC5C8356E6D4448A2FE7BEE77AD88 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB40D0E4136A2EBA646F9A9D0DA652 /* RedirectHandler.swift */; };
+		66B26C6CAE737EC21F4BA1F1851B69C5 /* Result+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CB7AF23C7E1475678C8CCC286CF41 /* Result+Alamofire.swift */; };
+		6AE407A4FB6C3D6ADD862CC6E3067A17 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591D5844289F02F52985F30FFDA6BB5 /* Session.swift */; };
+		6C08F6A77889651626583100F560153D /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8687B00F57762F34D3282826817C5 /* RequestTaskMap.swift */; };
+		6E0CFF2D45731DBADB8E5C7E9A2410AC /* CTNetLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1AAABE4990070B81F3EA78498705B /* CTNetLog.swift */; };
+		6E54F64E8DA73F4B0B46C216F9F93F63 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1741D7ACD43E5D0E9DBE557F396581 /* RequestInterceptor.swift */; };
+		72EC2712926E6D28B52360D9AC41668F /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DFB0A067881554C0CF2E83093E1D6 /* AlamofireExtended.swift */; };
+		7D3DD4A8BB36733BA15868F7FB8C56CE /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 845043F6DD76EF451A61A8C4EEB3BF6C /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AA937910F87915DE700CAB6C868689E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBC286A9BAE2611EFC71F7C9FB60B8 /* Notifications.swift */; };
+		911448B2EDA2FF880108F77642797A88 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197951AB8559109A9F40B71A85C843E /* ResponseSerialization.swift */; };
+		91B837CE0DCD8EDB300FCDFFA1279162 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DAB6EC98A071AAD9A29C41818F346 /* HTTPHeaders.swift */; };
+		9B1D8A7798D8A6F518FC9AF9725431D0 /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC350EEADBAF761D20138C94C4A0086 /* URLConvertible+URLRequestConvertible.swift */; };
+		9FED70D1E1FBFB80E974E999EF732258 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C44EFF4AE1CC95C361F6A007EDBD6E7 /* RetryPolicy.swift */; };
+		A9C7B29D4878F1690BBE3F8195CF0313 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1615E1FA68C09F9971FB26DF9B7D2BC /* CFNetwork.framework */; };
+		ABA85887A41495358C83CE3F3030EDEA /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D233027C8491F55B2473FCDA12389 /* CachedResponseHandler.swift */; };
+		C1C5B050B55C15103ABC81769551A283 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F2B77F50C8E86FDD27C5A573013C07 /* Response.swift */; };
+		C1F1DB6A9CBDE584D09BA1613AAD4F9D /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF4837C47DFB74B73C8B82A591E94C /* Alamofire.swift */; };
+		C6D5A4B4028B2C43380C9FA58BD5C8CA /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC11D87B8E53578044EA373E7DE6642 /* Alamofire-dummy.m */; };
+		D010FAC01DB60A3C747E3A1975F47E00 /* CTNetSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AB8124DA134DC66DEEB5D9F12A996 /* CTNetSupport.swift */; };
+		D03F1F02DE8606E6057D57866611BEBF /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB5063650D66E661FD979273F90078 /* MultipartUpload.swift */; };
+		D14066FAE94E304798E43651E5886D13 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998E57E5CB536D68D4A97BC1B56E62B8 /* ParameterEncoding.swift */; };
+		D31FC7FDD450C4CDD633ECBAD27C6221 /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F2B90B6F80D8F30747B3E178F5528F /* URLEncodedFormEncoder.swift */; };
+		D5EAAFB6FAD77A8F0699345149BA3CBB /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C7841BFC1EEBD8A094A3CA60AEADA /* URLRequest+Alamofire.swift */; };
+		D6A74D95F68B6496A9E98562F52F0232 /* CTNet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F04EAAFDADBB0E2F8472C6521BB50BA /* CTNet-dummy.m */; };
+		DC627AFC5B585686898B014184AFCABD /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA36ADD8B0E94CE139C28448821E13 /* AuthenticationInterceptor.swift */; };
+		E0494AC87AE446306F69C8A839CD93B4 /* Pods-CTNet_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38855836128D5065105F9E9348D877DA /* Pods-CTNet_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDC93BD7B9262119AE145E4C7A9D0212 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B14ACFFB6A91762B582B46A3466A3F /* Request.swift */; };
+		F0F3224FF592F9BA2A044A2FC2BD4CCD /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20097F794E1A1791AB97EBE230264E61 /* Validation.swift */; };
+		F70EF854395CDE981A8336E4FF0310FE /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970C386BD824FE4AD000560950399556 /* URLSessionConfiguration+Alamofire.swift */; };
+		FB60F4688EDC584514ABF472F15D9B8A /* CTNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D48089EE44CCFBC83A4DDF0A6B12C /* CTNet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		86D40C217A7D66F0D43660E6471FEE54 /* PBXContainerItemProxy */ = {
+		03610E2DF0F0669866D314FB06DFB433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		B131C53F13F3AEAA881B80C0386B14C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C6C080549672D345B5124B514B92B7FA;
 			remoteInfo = CTNet;
 		};
-		B8D37638BBA0B55E8B380B707721ED77 /* PBXContainerItemProxy */ = {
+		F6C92AA59E64ED75B4E5CB5D88983364 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AFD0F20A600838EE8973BD20939BF024;
-			remoteInfo = "Pods-CTNet_Example";
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1037F35086AD020D56AE25C9D4630044 /* CTNet.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CTNet.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		1C85D17B4C8A85D081272C4D944A35A7 /* CTNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CTNet.release.xcconfig; sourceTree = "<group>"; };
-		28DA9BF8B963B30939D5833B2D64728B /* Pods_CTNet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTNet_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3807EFCA25139FE80829CAFB48401FB3 /* Pods-CTNet_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CTNet_Tests-umbrella.h"; sourceTree = "<group>"; };
-		3904025A4F7F4597650769433AE82571 /* Pods-CTNet_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CTNet_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		423185162791F0D6651FD732BA6EE999 /* CTNet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CTNet-prefix.pch"; sourceTree = "<group>"; };
-		440BB7E22574FDF6004DFE44 /* CTNetTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTNetTest.swift; path = CTNet/Classes/CTNetTest.swift; sourceTree = "<group>"; };
-		440BB7E32574FDF6004DFE44 /* CTNetTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTNetTaskManager.swift; path = CTNet/Classes/CTNetTaskManager.swift; sourceTree = "<group>"; };
-		440BB7E42574FDF6004DFE44 /* CTNetConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTNetConfigure.swift; path = CTNet/Classes/CTNetConfigure.swift; sourceTree = "<group>"; };
-		440BB7E52574FDF6004DFE44 /* CTNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTNet.swift; path = CTNet/Classes/CTNet.swift; sourceTree = "<group>"; };
-		440BB7E62574FDF6004DFE44 /* CTNetLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTNetLog.swift; path = CTNet/Classes/CTNetLog.swift; sourceTree = "<group>"; };
-		440BB7E72574FDF6004DFE44 /* CTNetTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTNetTask.swift; path = CTNet/Classes/CTNetTask.swift; sourceTree = "<group>"; };
-		440BB7E82574FDF6004DFE44 /* CTNetTaskRetryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTNetTaskRetryManager.swift; path = CTNet/Classes/CTNetTaskRetryManager.swift; sourceTree = "<group>"; };
-		440BB7E92574FDF6004DFE44 /* CTNetSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTNetSupport.swift; path = CTNet/Classes/CTNetSupport.swift; sourceTree = "<group>"; };
-		49C03FE41093D7E9709AC9AECD764F35 /* Pods-CTNet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CTNet_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4BFD1A43B86B5A16D39B7D89F95146A8 /* Pods-CTNet_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CTNet_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		65834B13A2D66F8CF16885ECBAB7B1E8 /* CTNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CTNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		71A4CC02259DF02735579470D12668BA /* Pods-CTNet_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CTNet_Tests-dummy.m"; sourceTree = "<group>"; };
-		71E7B141F5947C9BE2DB92197E583169 /* Pods-CTNet_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CTNet_Example-frameworks.sh"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		815332E1E1652DBD4D6CD4C80C2D51CE /* CTNet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CTNet-Info.plist"; sourceTree = "<group>"; };
-		95CB392B78A897415F4F5DF28ACA2965 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		966F57F6B68C5F8557DE463695E79B4F /* Pods-CTNet_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CTNet_Example.modulemap"; sourceTree = "<group>"; };
-		990341142D8B999E73949A533A38B217 /* Pods-CTNet_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CTNet_Example-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EF2F9331F219DCAF828DAADED1F42CC /* Pods-CTNet_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CTNet_Example-dummy.m"; sourceTree = "<group>"; };
-		A2C7317269B7D6FF6EDA05DDB5A49C11 /* Pods-CTNet_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CTNet_Example-Info.plist"; sourceTree = "<group>"; };
-		A4E17E36BD595935EF65E7AECC4E91D4 /* Pods-CTNet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CTNet_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A7892BFB5F30EDDE015A3891352CC5EB /* Pods-CTNet_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CTNet_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AAA0B16EB55DEA2CEB7058413505E065 /* Pods_CTNet_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTNet_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6D68E849EF0C3EE97F73C758E8A1CF3 /* CTNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CTNet.debug.xcconfig; sourceTree = "<group>"; };
-		CCDB4175A80037708DC29F891E3699A1 /* CTNet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CTNet.modulemap; sourceTree = "<group>"; };
-		D0C350BB54096B625ADBC1950353C785 /* Pods-CTNet_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CTNet_Tests.modulemap"; sourceTree = "<group>"; };
-		D50BEDF08FBD00C6710DA2323E12BCB5 /* Pods-CTNet_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CTNet_Tests-Info.plist"; sourceTree = "<group>"; };
-		D8D6E8F567BA24769A14B3F87D67FF7F /* Pods-CTNet_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CTNet_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ECDD0E54681EAD13E1CEEC9B9B5871EB /* CTNet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CTNet-umbrella.h"; sourceTree = "<group>"; };
-		ED283C11ECEB92095EBD9152AD087DE5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F3B8541F64557000EC23392C586C462D /* Pods-CTNet_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CTNet_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F993A61C51A6B1DF4DAD9FECC9C50A54 /* Pods-CTNet_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CTNet_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		FBE5D0784FE7126A8003F215A181C801 /* CTNet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CTNet-dummy.m"; sourceTree = "<group>"; };
+		03662FC0C69CE9C12910BF7D49B84B42 /* CTNet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CTNet-prefix.pch"; sourceTree = "<group>"; };
+		048C58E04AAE5320A672C0DB62565F24 /* CTNetTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNetTask.swift; path = CTNet/Classes/CTNetTask.swift; sourceTree = "<group>"; };
+		062C7841BFC1EEBD8A094A3CA60AEADA /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
+		095FC26231856EA5F6D99353400E490A /* CTNet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CTNet-Info.plist"; sourceTree = "<group>"; };
+		0DD1AAABE4990070B81F3EA78498705B /* CTNetLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNetLog.swift; path = CTNet/Classes/CTNetLog.swift; sourceTree = "<group>"; };
+		0E0440F4381D065FED6264EFBCDB7960 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		0EC45C560942C5BCAB401419728808D3 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
+		150215B93CADFC83B761F84D551AA59D /* CTNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CTNet.release.xcconfig; sourceTree = "<group>"; };
+		1AC44BC108255F6766BF5383BF088F46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		20097F794E1A1791AB97EBE230264E61 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		28DA9BF8B963B30939D5833B2D64728B /* Pods_CTNet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CTNet_Example.framework; path = "Pods-CTNet_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29EBC286A9BAE2611EFC71F7C9FB60B8 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		2B0F05A3DBDE8E8AD6A8511F035D63D3 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		333DAB6EC98A071AAD9A29C41818F346 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
+		33EB520F806ED463A43767D0AAF83A15 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		349B2325F6647FEE3C9209201FF5D4C2 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		38855836128D5065105F9E9348D877DA /* Pods-CTNet_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CTNet_Example-umbrella.h"; sourceTree = "<group>"; };
+		3D68CE56CCFE46ED5A81508E1BB7B187 /* Pods-CTNet_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CTNet_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3DDEAF5CEAB549A05FB31E6E90D1A74C /* CTNetTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNetTest.swift; path = CTNet/Classes/CTNetTest.swift; sourceTree = "<group>"; };
+		401A0C3C3516540407583753D10DEB2B /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		4388F96485F322CF010F9CA6AF089C46 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
+		4591D5844289F02F52985F30FFDA6BB5 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
+		47CB8C3C9ED09F4A3A08CE85F55CBB7B /* CTNetTaskRetryManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNetTaskRetryManager.swift; path = CTNet/Classes/CTNetTaskRetryManager.swift; sourceTree = "<group>"; };
+		48EB71E613D0570AE7CA262AD350C08D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		48EB73F8127E572E8714303024FD6F4F /* CTNet.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CTNet.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4ABD9F54297FF27309F1F8A34F99417C /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		4D3E0E1E34DD4394C6023B622C262222 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
+		4E56298B0C6FCF5FECCDB28437D501B4 /* CTNet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CTNet.modulemap; sourceTree = "<group>"; };
+		4F04EAAFDADBB0E2F8472C6521BB50BA /* CTNet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CTNet-dummy.m"; sourceTree = "<group>"; };
+		51BB5063650D66E661FD979273F90078 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
+		51D45A2AF061C99B2355F19EC47243D9 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
+		56449009EBE3526DEC79E590A3E77F71 /* CTNet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CTNet-umbrella.h"; sourceTree = "<group>"; };
+		5A51515830AB9FE94E01DF6F48146153 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
+		5BEF4837C47DFB74B73C8B82A591E94C /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61F2B90B6F80D8F30747B3E178F5528F /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
+		639C1E0A738124B924C63AE93CCBBED3 /* Pods-CTNet_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CTNet_Example-dummy.m"; sourceTree = "<group>"; };
+		65834B13A2D66F8CF16885ECBAB7B1E8 /* CTNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CTNet.framework; path = CTNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E2AEA370523C246C2AB54B1D7191C5 /* Pods-CTNet_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CTNet_Example-frameworks.sh"; sourceTree = "<group>"; };
+		673CB7AF23C7E1475678C8CCC286CF41 /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Result+Alamofire.swift"; sourceTree = "<group>"; };
+		7197951AB8559109A9F40B71A85C843E /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		766D48089EE44CCFBC83A4DDF0A6B12C /* CTNet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNet.swift; path = CTNet/Classes/CTNet.swift; sourceTree = "<group>"; };
+		78E15BC706DF74BA4724833A13100F65 /* Pods-CTNet_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CTNet_Example-Info.plist"; sourceTree = "<group>"; };
+		79BFAE4F0928F95479DE70C637654FC5 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		79EB40D0E4136A2EBA646F9A9D0DA652 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
+		7E4949C7497F96921BAAE1BD53E87729 /* CTNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CTNet.debug.xcconfig; sourceTree = "<group>"; };
+		845043F6DD76EF451A61A8C4EEB3BF6C /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		84B14ACFFB6A91762B582B46A3466A3F /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		869CE1A67D7F182653CCBDF6A9CC0524 /* Pods-CTNet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CTNet_Example.release.xcconfig"; sourceTree = "<group>"; };
+		876F4F5D5DA538F51C4D4F27C9F64377 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		970C386BD824FE4AD000560950399556 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
+		998E57E5CB536D68D4A97BC1B56E62B8 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		9C1741D7ACD43E5D0E9DBE557F396581 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
+		9C44EFF4AE1CC95C361F6A007EDBD6E7 /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4153404C4C0A47E701390CEDAB4A093 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
+		A6F2B77F50C8E86FDD27C5A573013C07 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		B0EBFC4256A48F45E26B860D38479E52 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
+		B18A03E7F1E4DC70B23C0762374A8041 /* Pods-CTNet_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CTNet_Example.modulemap"; sourceTree = "<group>"; };
+		B4B8687B00F57762F34D3282826817C5 /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
+		B5DA36ADD8B0E94CE139C28448821E13 /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
+		BCC350EEADBAF761D20138C94C4A0086 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
+		C1615E1FA68C09F9971FB26DF9B7D2BC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		C95AB8124DA134DC66DEEB5D9F12A996 /* CTNetSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNetSupport.swift; path = CTNet/Classes/CTNetSupport.swift; sourceTree = "<group>"; };
+		CD5CDA513161397FC39AFC0085246D31 /* Pods-CTNet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CTNet_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D0FF301302A2A77E95697F2B5692FA5E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26220434118FCFC30E4850800AC3068 /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
+		D5279D783D8E827548A073E3D14F7DDD /* CTNetTaskManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNetTaskManager.swift; path = CTNet/Classes/CTNetTaskManager.swift; sourceTree = "<group>"; };
+		DA4D233027C8491F55B2473FCDA12389 /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/CachedResponseHandler.swift; sourceTree = "<group>"; };
+		DE6F8D6EC972A1DCE59DD58E4CB966AF /* Pods-CTNet_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CTNet_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		DFC11D87B8E53578044EA373E7DE6642 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		E5034539FD7A3ED7182A989C31C256DF /* CTNetConfigure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNetConfigure.swift; path = CTNet/Classes/CTNetConfigure.swift; sourceTree = "<group>"; };
+		F43DFB0A067881554C0CF2E83093E1D6 /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
+		F71BBCEF1586B8C48F6C090283FD70AA /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		FA24B13480173106997D3F6538CDE3CD /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
+		FF72312136F76CCB5AC50BCDD37ED4A2 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0CA3926B3B8E49BC16991190EA1055CD /* Frameworks */ = {
+		2B99B289ABCC3E95153C143C5274103F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A56BBAF87084D97FD4BDF21A64D1279 /* Foundation.framework in Frameworks */,
+				31B1E2C9FC5DF7B7BE9350E5E8F518CA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E5AC1A40E0ECB6D8E8A18284B2A3D88C /* Frameworks */ = {
+		936FE201DA63E9CB2294B435C342B57D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				460871AC13EA9974BF0956DC0BDF51D3 /* Foundation.framework in Frameworks */,
+				614B7683A9CF8ABADBD865879446CF5C /* Alamofire.framework in Frameworks */,
+				1B894ADCF0B052DD066057E41768CBA2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E85D99E85417614999542BEC9C13D935 /* Frameworks */ = {
+		9590D3FE7A79CD7CBEE3F346E8C19D4D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED1FC19BAEA42F33CC8DAA03B0953C9 /* Foundation.framework in Frameworks */,
+				A9C7B29D4878F1690BBE3F8195CF0313 /* CFNetwork.framework in Frameworks */,
+				476D5F33E25386C60D6BD75C4FA97C67 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06638C773FAA2328CF27E5EBB70D2E10 /* Targets Support Files */ = {
+		06BA9580526824128BDB4E93BCD32E72 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E545309CA173CD499BD53906006D276A /* Pods-CTNet_Example */,
-				225952482D894C690F04590C12672248 /* Pods-CTNet_Tests */,
+				4E56298B0C6FCF5FECCDB28437D501B4 /* CTNet.modulemap */,
+				4F04EAAFDADBB0E2F8472C6521BB50BA /* CTNet-dummy.m */,
+				095FC26231856EA5F6D99353400E490A /* CTNet-Info.plist */,
+				03662FC0C69CE9C12910BF7D49B84B42 /* CTNet-prefix.pch */,
+				56449009EBE3526DEC79E590A3E77F71 /* CTNet-umbrella.h */,
+				7E4949C7497F96921BAAE1BD53E87729 /* CTNet.debug.xcconfig */,
+				150215B93CADFC83B761F84D551AA59D /* CTNet.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CTNet";
 			sourceTree = "<group>";
 		};
-		225952482D894C690F04590C12672248 /* Pods-CTNet_Tests */ = {
+		1F04EEE0105B5A178A89882CFD2E20C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0C350BB54096B625ADBC1950353C785 /* Pods-CTNet_Tests.modulemap */,
-				D8D6E8F567BA24769A14B3F87D67FF7F /* Pods-CTNet_Tests-acknowledgements.markdown */,
-				F3B8541F64557000EC23392C586C462D /* Pods-CTNet_Tests-acknowledgements.plist */,
-				71A4CC02259DF02735579470D12668BA /* Pods-CTNet_Tests-dummy.m */,
-				D50BEDF08FBD00C6710DA2323E12BCB5 /* Pods-CTNet_Tests-Info.plist */,
-				3807EFCA25139FE80829CAFB48401FB3 /* Pods-CTNet_Tests-umbrella.h */,
-				A7892BFB5F30EDDE015A3891352CC5EB /* Pods-CTNet_Tests.debug.xcconfig */,
-				3904025A4F7F4597650769433AE82571 /* Pods-CTNet_Tests.release.xcconfig */,
-			);
-			name = "Pods-CTNet_Tests";
-			path = "Target Support Files/Pods-CTNet_Tests";
-			sourceTree = "<group>";
-		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		5C40E9CC7B790E1588839D4C1BC9FF71 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				1037F35086AD020D56AE25C9D4630044 /* CTNet.podspec */,
-				95CB392B78A897415F4F5DF28ACA2965 /* LICENSE */,
-				ED283C11ECEB92095EBD9152AD087DE5 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		602712E870B40038D19E374D18946B95 /* Products */ = {
-			isa = PBXGroup;
-			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
 				65834B13A2D66F8CF16885ECBAB7B1E8 /* CTNet.framework */,
 				28DA9BF8B963B30939D5833B2D64728B /* Pods_CTNet_Example.framework */,
-				AAA0B16EB55DEA2CEB7058413505E065 /* Pods_CTNet_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B1DECCA442AF17A96B7B264337CBCB5 /* CTNet */ = {
+		44E8BF8AB8A324F7DD26B3068C75A805 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				440BB7E52574FDF6004DFE44 /* CTNet.swift */,
-				440BB7E42574FDF6004DFE44 /* CTNetConfigure.swift */,
-				440BB7E62574FDF6004DFE44 /* CTNetLog.swift */,
-				440BB7E92574FDF6004DFE44 /* CTNetSupport.swift */,
-				440BB7E72574FDF6004DFE44 /* CTNetTask.swift */,
-				440BB7E32574FDF6004DFE44 /* CTNetTaskManager.swift */,
-				440BB7E82574FDF6004DFE44 /* CTNetTaskRetryManager.swift */,
-				440BB7E22574FDF6004DFE44 /* CTNetTest.swift */,
-				5C40E9CC7B790E1588839D4C1BC9FF71 /* Pod */,
-				BFD95D99249EE0D19F9ACF24169A634C /* Support Files */,
+				48EB73F8127E572E8714303024FD6F4F /* CTNet.podspec */,
+				33EB520F806ED463A43767D0AAF83A15 /* LICENSE */,
+				48EB71E613D0570AE7CA262AD350C08D /* README.md */,
 			);
-			name = CTNet;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		8A09E52EE4F6A1499997192F9492D6DA /* Development Pods */ = {
+		4F4183BF737B260C4FBE24D96FCA9145 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7B1DECCA442AF17A96B7B264337CBCB5 /* CTNet */,
+				C7391F5C011DAE737382C7380C2F441C /* CTNet */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		BFD95D99249EE0D19F9ACF24169A634C /* Support Files */ = {
+		5A6F22EC0F5633257B85B6E660A2165F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CCDB4175A80037708DC29F891E3699A1 /* CTNet.modulemap */,
-				FBE5D0784FE7126A8003F215A181C801 /* CTNet-dummy.m */,
-				815332E1E1652DBD4D6CD4C80C2D51CE /* CTNet-Info.plist */,
-				423185162791F0D6651FD732BA6EE999 /* CTNet-prefix.pch */,
-				ECDD0E54681EAD13E1CEEC9B9B5871EB /* CTNet-umbrella.h */,
-				C6D68E849EF0C3EE97F73C758E8A1CF3 /* CTNet.debug.xcconfig */,
-				1C85D17B4C8A85D081272C4D944A35A7 /* CTNet.release.xcconfig */,
+				79BFAE4F0928F95479DE70C637654FC5 /* Alamofire.modulemap */,
+				DFC11D87B8E53578044EA373E7DE6642 /* Alamofire-dummy.m */,
+				F71BBCEF1586B8C48F6C090283FD70AA /* Alamofire-Info.plist */,
+				2B0F05A3DBDE8E8AD6A8511F035D63D3 /* Alamofire-prefix.pch */,
+				845043F6DD76EF451A61A8C4EEB3BF6C /* Alamofire-umbrella.h */,
+				4D3E0E1E34DD4394C6023B622C262222 /* Alamofire.debug.xcconfig */,
+				A4153404C4C0A47E701390CEDAB4A093 /* Alamofire.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CTNet";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		6FF97FACCA57A9A7BC9912B94BE14E47 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				349B2325F6647FEE3C9209201FF5D4C2 /* AFError.swift */,
+				5BEF4837C47DFB74B73C8B82A591E94C /* Alamofire.swift */,
+				F43DFB0A067881554C0CF2E83093E1D6 /* AlamofireExtended.swift */,
+				B5DA36ADD8B0E94CE139C28448821E13 /* AuthenticationInterceptor.swift */,
+				DA4D233027C8491F55B2473FCDA12389 /* CachedResponseHandler.swift */,
+				B0EBFC4256A48F45E26B860D38479E52 /* Combine.swift */,
+				4ABD9F54297FF27309F1F8A34F99417C /* DispatchQueue+Alamofire.swift */,
+				0EC45C560942C5BCAB401419728808D3 /* EventMonitor.swift */,
+				333DAB6EC98A071AAD9A29C41818F346 /* HTTPHeaders.swift */,
+				4388F96485F322CF010F9CA6AF089C46 /* HTTPMethod.swift */,
+				0E0440F4381D065FED6264EFBCDB7960 /* MultipartFormData.swift */,
+				51BB5063650D66E661FD979273F90078 /* MultipartUpload.swift */,
+				401A0C3C3516540407583753D10DEB2B /* NetworkReachabilityManager.swift */,
+				29EBC286A9BAE2611EFC71F7C9FB60B8 /* Notifications.swift */,
+				876F4F5D5DA538F51C4D4F27C9F64377 /* OperationQueue+Alamofire.swift */,
+				D26220434118FCFC30E4850800AC3068 /* ParameterEncoder.swift */,
+				998E57E5CB536D68D4A97BC1B56E62B8 /* ParameterEncoding.swift */,
+				51D45A2AF061C99B2355F19EC47243D9 /* Protected.swift */,
+				79EB40D0E4136A2EBA646F9A9D0DA652 /* RedirectHandler.swift */,
+				84B14ACFFB6A91762B582B46A3466A3F /* Request.swift */,
+				9C1741D7ACD43E5D0E9DBE557F396581 /* RequestInterceptor.swift */,
+				B4B8687B00F57762F34D3282826817C5 /* RequestTaskMap.swift */,
+				A6F2B77F50C8E86FDD27C5A573013C07 /* Response.swift */,
+				7197951AB8559109A9F40B71A85C843E /* ResponseSerialization.swift */,
+				673CB7AF23C7E1475678C8CCC286CF41 /* Result+Alamofire.swift */,
+				9C44EFF4AE1CC95C361F6A007EDBD6E7 /* RetryPolicy.swift */,
+				FA24B13480173106997D3F6538CDE3CD /* ServerTrustEvaluation.swift */,
+				4591D5844289F02F52985F30FFDA6BB5 /* Session.swift */,
+				FF72312136F76CCB5AC50BCDD37ED4A2 /* SessionDelegate.swift */,
+				5A51515830AB9FE94E01DF6F48146153 /* StringEncoding+Alamofire.swift */,
+				BCC350EEADBAF761D20138C94C4A0086 /* URLConvertible+URLRequestConvertible.swift */,
+				61F2B90B6F80D8F30747B3E178F5528F /* URLEncodedFormEncoder.swift */,
+				062C7841BFC1EEBD8A094A3CA60AEADA /* URLRequest+Alamofire.swift */,
+				970C386BD824FE4AD000560950399556 /* URLSessionConfiguration+Alamofire.swift */,
+				20097F794E1A1791AB97EBE230264E61 /* Validation.swift */,
+				5A6F22EC0F5633257B85B6E660A2165F /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		8B7A79262BFE6D94671D449787F3AAA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0FF301302A2A77E95697F2B5692FA5E /* Alamofire.framework */,
+				C5DA6AFE22B4BD7F9A7902BFAC53F976 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90CFFE62E85908CA6EC56FF4F1AB7A83 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E87BF14B270D12CB2D950928499C14D4 /* Pods-CTNet_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C5DA6AFE22B4BD7F9A7902BFAC53F976 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C1615E1FA68C09F9971FB26DF9B7D2BC /* CFNetwork.framework */,
+				1AC44BC108255F6766BF5383BF088F46 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C7391F5C011DAE737382C7380C2F441C /* CTNet */ = {
+			isa = PBXGroup;
+			children = (
+				766D48089EE44CCFBC83A4DDF0A6B12C /* CTNet.swift */,
+				E5034539FD7A3ED7182A989C31C256DF /* CTNetConfigure.swift */,
+				0DD1AAABE4990070B81F3EA78498705B /* CTNetLog.swift */,
+				C95AB8124DA134DC66DEEB5D9F12A996 /* CTNetSupport.swift */,
+				048C58E04AAE5320A672C0DB62565F24 /* CTNetTask.swift */,
+				D5279D783D8E827548A073E3D14F7DDD /* CTNetTaskManager.swift */,
+				47CB8C3C9ED09F4A3A08CE85F55CBB7B /* CTNetTaskRetryManager.swift */,
+				3DDEAF5CEAB549A05FB31E6E90D1A74C /* CTNetTest.swift */,
+				44E8BF8AB8A324F7DD26B3068C75A805 /* Pod */,
+				06BA9580526824128BDB4E93BCD32E72 /* Support Files */,
+			);
+			name = CTNet;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				8A09E52EE4F6A1499997192F9492D6DA /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				602712E870B40038D19E374D18946B95 /* Products */,
-				06638C773FAA2328CF27E5EBB70D2E10 /* Targets Support Files */,
+				4F4183BF737B260C4FBE24D96FCA9145 /* Development Pods */,
+				8B7A79262BFE6D94671D449787F3AAA9 /* Frameworks */,
+				D6535AE6278B88B90F3A376D1347504F /* Pods */,
+				1F04EEE0105B5A178A89882CFD2E20C3 /* Products */,
+				90CFFE62E85908CA6EC56FF4F1AB7A83 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D6535AE6278B88B90F3A376D1347504F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				6FF97FACCA57A9A7BC9912B94BE14E47 /* Alamofire */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		E545309CA173CD499BD53906006D276A /* Pods-CTNet_Example */ = {
+		E87BF14B270D12CB2D950928499C14D4 /* Pods-CTNet_Example */ = {
 			isa = PBXGroup;
 			children = (
-				966F57F6B68C5F8557DE463695E79B4F /* Pods-CTNet_Example.modulemap */,
-				4BFD1A43B86B5A16D39B7D89F95146A8 /* Pods-CTNet_Example-acknowledgements.markdown */,
-				F993A61C51A6B1DF4DAD9FECC9C50A54 /* Pods-CTNet_Example-acknowledgements.plist */,
-				9EF2F9331F219DCAF828DAADED1F42CC /* Pods-CTNet_Example-dummy.m */,
-				71E7B141F5947C9BE2DB92197E583169 /* Pods-CTNet_Example-frameworks.sh */,
-				A2C7317269B7D6FF6EDA05DDB5A49C11 /* Pods-CTNet_Example-Info.plist */,
-				990341142D8B999E73949A533A38B217 /* Pods-CTNet_Example-umbrella.h */,
-				A4E17E36BD595935EF65E7AECC4E91D4 /* Pods-CTNet_Example.debug.xcconfig */,
-				49C03FE41093D7E9709AC9AECD764F35 /* Pods-CTNet_Example.release.xcconfig */,
+				B18A03E7F1E4DC70B23C0762374A8041 /* Pods-CTNet_Example.modulemap */,
+				3D68CE56CCFE46ED5A81508E1BB7B187 /* Pods-CTNet_Example-acknowledgements.markdown */,
+				DE6F8D6EC972A1DCE59DD58E4CB966AF /* Pods-CTNet_Example-acknowledgements.plist */,
+				639C1E0A738124B924C63AE93CCBBED3 /* Pods-CTNet_Example-dummy.m */,
+				65E2AEA370523C246C2AB54B1D7191C5 /* Pods-CTNet_Example-frameworks.sh */,
+				78E15BC706DF74BA4724833A13100F65 /* Pods-CTNet_Example-Info.plist */,
+				38855836128D5065105F9E9348D877DA /* Pods-CTNet_Example-umbrella.h */,
+				CD5CDA513161397FC39AFC0085246D31 /* Pods-CTNet_Example.debug.xcconfig */,
+				869CE1A67D7F182653CCBDF6A9CC0524 /* Pods-CTNet_Example.release.xcconfig */,
 			);
 			name = "Pods-CTNet_Example";
 			path = "Target Support Files/Pods-CTNet_Example";
@@ -247,27 +382,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		37CA5827659D3D277AB1600A0CF1FE20 /* Headers */ = {
+		8070B01910C64B9AFD0DB550EDE38D6B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81897F9E04183A3F995F61ED67CA9343 /* Pods-CTNet_Example-umbrella.h in Headers */,
+				7D3DD4A8BB36733BA15868F7FB8C56CE /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		785B26BBE3A642B2CEA0B90CA714146C /* Headers */ = {
+		C61DEC3FE2A92573FEF7C266BCA5AF7D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F67337AF7DAB3FF8CEE8345E0D005CC2 /* Pods-CTNet_Tests-umbrella.h in Headers */,
+				085AB83366A1DAF9B1D0CC87738C3A3F /* CTNet-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0407445A8CA2D4EA371651AC6FB766E /* Headers */ = {
+		E48BCCB454DC2552E25B5CE06325B6D8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D5C577E7E16489247CC112C5ABFDEB /* CTNet-umbrella.h in Headers */,
+				E0494AC87AE446306F69C8A839CD93B4 /* Pods-CTNet_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,58 +411,59 @@
 /* Begin PBXNativeTarget section */
 		AFD0F20A600838EE8973BD20939BF024 /* Pods-CTNet_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75877F9C9B9CA85A0C465FA2432B33CD /* Build configuration list for PBXNativeTarget "Pods-CTNet_Example" */;
+			buildConfigurationList = 91732082085C9BA6B17692FC711C4AE2 /* Build configuration list for PBXNativeTarget "Pods-CTNet_Example" */;
 			buildPhases = (
-				37CA5827659D3D277AB1600A0CF1FE20 /* Headers */,
-				93B93C8A212E7CB2F4E9C4052EDE755B /* Sources */,
-				E5AC1A40E0ECB6D8E8A18284B2A3D88C /* Frameworks */,
-				1670C45B7EB3368B842DF84E27A37612 /* Resources */,
+				E48BCCB454DC2552E25B5CE06325B6D8 /* Headers */,
+				CE83CA9522C9D8561E44AF47C050D9D4 /* Sources */,
+				2B99B289ABCC3E95153C143C5274103F /* Frameworks */,
+				D73853A71E5B3DFC4E352B868431EA86 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A777234799B82E77341FF243085DE01B /* PBXTargetDependency */,
+				A6D3CA59E7867C1C933558212F54D4FD /* PBXTargetDependency */,
+				7159BBD51DC5B7DB26882E5EE9E17DC7 /* PBXTargetDependency */,
 			);
 			name = "Pods-CTNet_Example";
 			productName = "Pods-CTNet_Example";
 			productReference = 28DA9BF8B963B30939D5833B2D64728B /* Pods_CTNet_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B92212724F0A9099E9F5BD141E178FB5 /* Pods-CTNet_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 23F078FC5E9C2D2F651CC18FD6D746B6 /* Build configuration list for PBXNativeTarget "Pods-CTNet_Tests" */;
-			buildPhases = (
-				785B26BBE3A642B2CEA0B90CA714146C /* Headers */,
-				7788761A320226047EBA233B15DE8340 /* Sources */,
-				0CA3926B3B8E49BC16991190EA1055CD /* Frameworks */,
-				183D234E600EBD7186873F69235E4DED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6E6DE03D9189A3D50D5CE74B8FECDA8D /* PBXTargetDependency */,
-			);
-			name = "Pods-CTNet_Tests";
-			productName = "Pods-CTNet_Tests";
-			productReference = AAA0B16EB55DEA2CEB7058413505E065 /* Pods_CTNet_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		C6C080549672D345B5124B514B92B7FA /* CTNet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E0AB651D3D732C2320A249C57538E99C /* Build configuration list for PBXNativeTarget "CTNet" */;
+			buildConfigurationList = FEB8EE7BB97445F057484A8233448E91 /* Build configuration list for PBXNativeTarget "CTNet" */;
 			buildPhases = (
-				D0407445A8CA2D4EA371651AC6FB766E /* Headers */,
-				2CA21CA9FEE06AB95B734F984501CE4D /* Sources */,
-				E85D99E85417614999542BEC9C13D935 /* Frameworks */,
-				2857656E868B27FD9DDE43EE64505DD3 /* Resources */,
+				C61DEC3FE2A92573FEF7C266BCA5AF7D /* Headers */,
+				D9C35CE1877A5803A5C3561B2DBFC38D /* Sources */,
+				936FE201DA63E9CB2294B435C342B57D /* Frameworks */,
+				F15F735D556D0BEE21BF5521AE53844E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				31D3BF527328D9C440BC84CA75C81781 /* PBXTargetDependency */,
 			);
 			name = CTNet;
 			productName = CTNet;
 			productReference = 65834B13A2D66F8CF16885ECBAB7B1E8 /* CTNet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78E219AC01CD5AFED663C9AB28280801 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				8070B01910C64B9AFD0DB550EDE38D6B /* Headers */,
+				2C8326877F6A9617C2FBE9BD15D95B59 /* Sources */,
+				9590D3FE7A79CD7CBEE3F346E8C19D4D /* Frameworks */,
+				9BCA7D105D531AE5DAF34FB86A2E623A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -338,11 +474,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					C6C080549672D345B5124B514B92B7FA = {
-						LastSwiftMigration = 1220;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -353,33 +484,33 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 602712E870B40038D19E374D18946B95 /* Products */;
+			productRefGroup = 1F04EEE0105B5A178A89882CFD2E20C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
 				C6C080549672D345B5124B514B92B7FA /* CTNet */,
 				AFD0F20A600838EE8973BD20939BF024 /* Pods-CTNet_Example */,
-				B92212724F0A9099E9F5BD141E178FB5 /* Pods-CTNet_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1670C45B7EB3368B842DF84E27A37612 /* Resources */ = {
+		9BCA7D105D531AE5DAF34FB86A2E623A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		183D234E600EBD7186873F69235E4DED /* Resources */ = {
+		D73853A71E5B3DFC4E352B868431EA86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2857656E868B27FD9DDE43EE64505DD3 /* Resources */ = {
+		F15F735D556D0BEE21BF5521AE53844E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,61 +520,102 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2CA21CA9FEE06AB95B734F984501CE4D /* Sources */ = {
+		2C8326877F6A9617C2FBE9BD15D95B59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				440BB7F02574FDF6004DFE44 /* CTNetTaskRetryManager.swift in Sources */,
-				440BB7EF2574FDF6004DFE44 /* CTNetTask.swift in Sources */,
-				440BB7EB2574FDF6004DFE44 /* CTNetTaskManager.swift in Sources */,
-				440BB7EA2574FDF6004DFE44 /* CTNetTest.swift in Sources */,
-				440BB7ED2574FDF6004DFE44 /* CTNet.swift in Sources */,
-				29EDD2A74AB3E11B64B64AF6EEFFE5CD /* CTNet-dummy.m in Sources */,
-				440BB7EC2574FDF6004DFE44 /* CTNetConfigure.swift in Sources */,
-				440BB7EE2574FDF6004DFE44 /* CTNetLog.swift in Sources */,
-				440BB7F12574FDF6004DFE44 /* CTNetSupport.swift in Sources */,
+				1208E81DA8B532D0646D627B50290EB6 /* AFError.swift in Sources */,
+				C6D5A4B4028B2C43380C9FA58BD5C8CA /* Alamofire-dummy.m in Sources */,
+				C1F1DB6A9CBDE584D09BA1613AAD4F9D /* Alamofire.swift in Sources */,
+				72EC2712926E6D28B52360D9AC41668F /* AlamofireExtended.swift in Sources */,
+				DC627AFC5B585686898B014184AFCABD /* AuthenticationInterceptor.swift in Sources */,
+				ABA85887A41495358C83CE3F3030EDEA /* CachedResponseHandler.swift in Sources */,
+				0A1849775CF90D514963187D3A771CF8 /* Combine.swift in Sources */,
+				27E59A11A2743B0595CDE3A08675EAE1 /* DispatchQueue+Alamofire.swift in Sources */,
+				6546D728B69398F93B506845141EBD61 /* EventMonitor.swift in Sources */,
+				91B837CE0DCD8EDB300FCDFFA1279162 /* HTTPHeaders.swift in Sources */,
+				013BAC24F7AC722E59517CB110A9E685 /* HTTPMethod.swift in Sources */,
+				45B8CC1C61E7A0BB28CFA8CE7C12FEBC /* MultipartFormData.swift in Sources */,
+				D03F1F02DE8606E6057D57866611BEBF /* MultipartUpload.swift in Sources */,
+				19D605A3233499828FB6B790869F3E9C /* NetworkReachabilityManager.swift in Sources */,
+				8AA937910F87915DE700CAB6C868689E /* Notifications.swift in Sources */,
+				0A900DF17E3B64F08AF673E9A0DDD697 /* OperationQueue+Alamofire.swift in Sources */,
+				4AEC050FA7D5ED52FDA9DF50EA3560DF /* ParameterEncoder.swift in Sources */,
+				D14066FAE94E304798E43651E5886D13 /* ParameterEncoding.swift in Sources */,
+				218C14EAE5AA31C30314AE0289B732A0 /* Protected.swift in Sources */,
+				666EC5C8356E6D4448A2FE7BEE77AD88 /* RedirectHandler.swift in Sources */,
+				EDC93BD7B9262119AE145E4C7A9D0212 /* Request.swift in Sources */,
+				6E54F64E8DA73F4B0B46C216F9F93F63 /* RequestInterceptor.swift in Sources */,
+				6C08F6A77889651626583100F560153D /* RequestTaskMap.swift in Sources */,
+				C1C5B050B55C15103ABC81769551A283 /* Response.swift in Sources */,
+				911448B2EDA2FF880108F77642797A88 /* ResponseSerialization.swift in Sources */,
+				66B26C6CAE737EC21F4BA1F1851B69C5 /* Result+Alamofire.swift in Sources */,
+				9FED70D1E1FBFB80E974E999EF732258 /* RetryPolicy.swift in Sources */,
+				47FDBBBD2704901588C3A7C56BBC502D /* ServerTrustEvaluation.swift in Sources */,
+				6AE407A4FB6C3D6ADD862CC6E3067A17 /* Session.swift in Sources */,
+				381FF05F8B4F611EE9C2FDBE4457BB89 /* SessionDelegate.swift in Sources */,
+				212EDC48B68107BEA9247F3464CE696E /* StringEncoding+Alamofire.swift in Sources */,
+				9B1D8A7798D8A6F518FC9AF9725431D0 /* URLConvertible+URLRequestConvertible.swift in Sources */,
+				D31FC7FDD450C4CDD633ECBAD27C6221 /* URLEncodedFormEncoder.swift in Sources */,
+				D5EAAFB6FAD77A8F0699345149BA3CBB /* URLRequest+Alamofire.swift in Sources */,
+				F70EF854395CDE981A8336E4FF0310FE /* URLSessionConfiguration+Alamofire.swift in Sources */,
+				F0F3224FF592F9BA2A044A2FC2BD4CCD /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7788761A320226047EBA233B15DE8340 /* Sources */ = {
+		CE83CA9522C9D8561E44AF47C050D9D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD90A9E0D48AB35692105639F276B48 /* Pods-CTNet_Tests-dummy.m in Sources */,
+				27760EFB79396C882A5B61FB1D1BF13B /* Pods-CTNet_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93B93C8A212E7CB2F4E9C4052EDE755B /* Sources */ = {
+		D9C35CE1877A5803A5C3561B2DBFC38D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F77CCDFD58CBD04EC9C4090BD773456 /* Pods-CTNet_Example-dummy.m in Sources */,
+				D6A74D95F68B6496A9E98562F52F0232 /* CTNet-dummy.m in Sources */,
+				FB60F4688EDC584514ABF472F15D9B8A /* CTNet.swift in Sources */,
+				06BB4323323D764B10B360C06865E95E /* CTNetConfigure.swift in Sources */,
+				6E0CFF2D45731DBADB8E5C7E9A2410AC /* CTNetLog.swift in Sources */,
+				D010FAC01DB60A3C747E3A1975F47E00 /* CTNetSupport.swift in Sources */,
+				2ED55AB207F984ABC94FDD3C583943CF /* CTNetTask.swift in Sources */,
+				5CA183C6E16B6597B70E56C763659AE3 /* CTNetTaskManager.swift in Sources */,
+				15FE7D23233397CD5FAC7441149DFA26 /* CTNetTaskRetryManager.swift in Sources */,
+				5AB31C3753662AE2E0E671AE5D51B698 /* CTNetTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6E6DE03D9189A3D50D5CE74B8FECDA8D /* PBXTargetDependency */ = {
+		31D3BF527328D9C440BC84CA75C81781 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-CTNet_Example";
-			target = AFD0F20A600838EE8973BD20939BF024 /* Pods-CTNet_Example */;
-			targetProxy = B8D37638BBA0B55E8B380B707721ED77 /* PBXContainerItemProxy */;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 03610E2DF0F0669866D314FB06DFB433 /* PBXContainerItemProxy */;
 		};
-		A777234799B82E77341FF243085DE01B /* PBXTargetDependency */ = {
+		7159BBD51DC5B7DB26882E5EE9E17DC7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CTNet;
 			target = C6C080549672D345B5124B514B92B7FA /* CTNet */;
-			targetProxy = 86D40C217A7D66F0D43660E6471FEE54 /* PBXContainerItemProxy */;
+			targetProxy = B131C53F13F3AEAA881B80C0386B14C1 /* PBXContainerItemProxy */;
+		};
+		A6D3CA59E7867C1C933558212F54D4FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = F6C92AA59E64ED75B4E5CB5D88983364 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0E5D2A06124E569DA14D47E956D28448 /* Release */ = {
+		2444D36F2CB5FF3F9469EF5F6322EA10 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49C03FE41093D7E9709AC9AECD764F35 /* Pods-CTNet_Example.release.xcconfig */;
+			baseConfigurationReference = 4D3E0E1E34DD4394C6023B622C262222 /* Alamofire.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -452,31 +624,30 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CTNet_Example/Pods-CTNet_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CTNet_Example/Pods-CTNet_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		1BD8E2F0C11749AA465684E0554CC105 /* Debug */ = {
+		2A75A660D71D4CD81F18352DF04D95C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4E17E36BD595935EF65E7AECC4E91D4 /* Pods-CTNet_Example.debug.xcconfig */;
+			baseConfigurationReference = CD5CDA513161397FC39AFC0085246D31 /* Pods-CTNet_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -487,7 +658,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CTNet_Example/Pods-CTNet_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CTNet_Example/Pods-CTNet_Example.modulemap";
@@ -504,11 +675,11 @@
 			};
 			name = Debug;
 		};
-		1ECC9A02F4920ED84BEFF4D6EAAEE857 /* Release */ = {
+		2D1AC9A945FCE0F62CA6C56C0D8003AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3904025A4F7F4597650769433AE82571 /* Pods-CTNet_Tests.release.xcconfig */;
+			baseConfigurationReference = 7E4949C7497F96921BAAE1BD53E87729 /* CTNet.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -517,12 +688,76 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CTNet_Tests/Pods-CTNet_Tests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CTNet/CTNet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CTNet/CTNet-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CTNet/CTNet.modulemap";
+				PRODUCT_MODULE_NAME = CTNet;
+				PRODUCT_NAME = CTNet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		31CBD0FF664972123675C0AA9E6FAE60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 150215B93CADFC83B761F84D551AA59D /* CTNet.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CTNet/CTNet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CTNet/CTNet-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CTNet/CTNet.modulemap";
+				PRODUCT_MODULE_NAME = CTNet;
+				PRODUCT_NAME = CTNet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4322B70EB0FF38C8FB670E1AF157525B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 869CE1A67D7F182653CCBDF6A9CC0524 /* Pods-CTNet_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CTNet_Example/Pods-CTNet_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CTNet_Tests/Pods-CTNet_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-CTNet_Example/Pods-CTNet_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -537,7 +772,7 @@
 			};
 			name = Release;
 		};
-		431BA2B8298F0EE71735B9E0114E1955 /* Release */ = {
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -587,22 +822,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		63A645E0C9A9CD043DE9D9150BD1B321 /* Debug */ = {
+		9B66E952E27F29569285AB82461A2F34 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7892BFB5F30EDDE015A3891352CC5EB /* Pods-CTNet_Tests.debug.xcconfig */;
+			baseConfigurationReference = A4153404C4C0A47E701390CEDAB4A093 /* Alamofire.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -611,26 +847,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CTNet_Tests/Pods-CTNet_Tests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CTNet_Tests/Pods-CTNet_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		79759604D78320E712558F49DF19AA9F /* Debug */ = {
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -683,7 +919,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -696,105 +932,41 @@
 			};
 			name = Debug;
 		};
-		C2C5677D4B9833D9C8D100ADBF9616B0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C85D17B4C8A85D081272C4D944A35A7 /* CTNet.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CTNet/CTNet-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CTNet/CTNet-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CTNet/CTNet.modulemap";
-				PRODUCT_MODULE_NAME = CTNet;
-				PRODUCT_NAME = CTNet;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E467508C885E7316CC4F55297CB763B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6D68E849EF0C3EE97F73C758E8A1CF3 /* CTNet.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CTNet/CTNet-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CTNet/CTNet-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CTNet/CTNet.modulemap";
-				PRODUCT_MODULE_NAME = CTNet;
-				PRODUCT_NAME = CTNet;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		23F078FC5E9C2D2F651CC18FD6D746B6 /* Build configuration list for PBXNativeTarget "Pods-CTNet_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				63A645E0C9A9CD043DE9D9150BD1B321 /* Debug */,
-				1ECC9A02F4920ED84BEFF4D6EAAEE857 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				79759604D78320E712558F49DF19AA9F /* Debug */,
-				431BA2B8298F0EE71735B9E0114E1955 /* Release */,
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75877F9C9B9CA85A0C465FA2432B33CD /* Build configuration list for PBXNativeTarget "Pods-CTNet_Example" */ = {
+		78E219AC01CD5AFED663C9AB28280801 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BD8E2F0C11749AA465684E0554CC105 /* Debug */,
-				0E5D2A06124E569DA14D47E956D28448 /* Release */,
+				2444D36F2CB5FF3F9469EF5F6322EA10 /* Debug */,
+				9B66E952E27F29569285AB82461A2F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0AB651D3D732C2320A249C57538E99C /* Build configuration list for PBXNativeTarget "CTNet" */ = {
+		91732082085C9BA6B17692FC711C4AE2 /* Build configuration list for PBXNativeTarget "Pods-CTNet_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E467508C885E7316CC4F55297CB763B0 /* Debug */,
-				C2C5677D4B9833D9C8D100ADBF9616B0 /* Release */,
+				2A75A660D71D4CD81F18352DF04D95C2 /* Debug */,
+				4322B70EB0FF38C8FB670E1AF157525B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEB8EE7BB97445F057484A8233448E91 /* Build configuration list for PBXNativeTarget "CTNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D1AC9A945FCE0F62CA6C56C0D8003AB /* Debug */,
+				31CBD0FF664972123675C0AA9E6FAE60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
