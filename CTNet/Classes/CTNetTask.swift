@@ -36,6 +36,14 @@ class CTNetTask:Operation{
         configuration.headers = httpHeaders
         configuration.timeoutIntervalForRequest = CTNetConfigure.shared.timeout
         let session = Alamofire.Session.init(configuration: configuration)
+
+        if CTNetConfigure.shared.isHTTPMode {
+            var evaluators = [String:ServerTrustEvaluating]()
+            for key in CTNetConfigure.shared.HTTPEvaluators{
+                evaluators[key] = DisabledEvaluator()
+            }
+            session.serverTrustManager = ServerTrustManager(allHostsMustBeEvaluated: false, evaluators: evaluators)
+        }
         return session
     }()
     private var httpHeaders:HTTPHeaders = {

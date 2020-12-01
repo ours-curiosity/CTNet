@@ -19,6 +19,9 @@ public class CTNetConfigure{
     
     public var debug = true
     
+    /// http 验证赦免名单
+    public var HTTPEvaluators = [""]
+    
     public static let shared:CTNetConfigure = {
         let configure = CTNetConfigure()
         return configure

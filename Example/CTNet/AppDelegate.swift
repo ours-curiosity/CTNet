@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CTNetConfigure.shared.port = ""
         CTNetConfigure.shared.host = "192.168.11.147"
         CTNetConfigure.shared.timeout = 20
+        
         CTNet.request(url: "/ping", method: .get, parameters: [:]) { (jsonDict, error) in
             
         }
