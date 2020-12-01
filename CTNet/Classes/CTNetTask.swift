@@ -38,15 +38,17 @@ class CTNetTask:Operation{
         
         var evaluators = [String:ServerTrustEvaluating]()
         for key in CTNetConfigure.shared.HTTPEvaluators{
-            evaluators[key] = DisabledTrustEvaluator()
+            if key != ""{
+                evaluators[key] = DisabledTrustEvaluator()
+            }
         }
         
         if evaluators.isEmpty{
-            let session = Alamofire.Session.init(configuration: configuration)
+            let session = Alamofire.Session(configuration: configuration)
             return session
         }else{
             let serverTrustManager = ServerTrustManager(allHostsMustBeEvaluated: false, evaluators: evaluators)
-            let session = Alamofire.Session.init(configuration: configuration,serverTrustManager: serverTrustManager)
+            let session = Alamofire.Session(configuration: configuration,serverTrustManager: serverTrustManager)
             return session
         }
     }()
