@@ -1,6 +1,6 @@
 {
   "name": "CTNet",
-  "version": "0.2.2",
+  "version": "0.2.6",
   "summary": "A short description of CTNet.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/ours-curiosity/CTNet",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/ours-curiosity/CTNet.git",
-    "tag": "0.2.2"
+    "tag": "0.2.6"
   },
   "platforms": {
     "ios": "10.0"
