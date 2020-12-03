@@ -27,3 +27,39 @@ tliens, maninios@163.com
 ## License
 
 CTNet is available under the MIT license. See the LICENSE file for more info.
+## 使用
+
+具体查看Demo
+
+建议同RxSwift一起使用
+```
+        CTNetConfigure.shared.port = ":8080"
+        CTNetConfigure.shared.host = "http://192.168.11.147"
+        CTNetConfigure.shared.timeout = 20
+        CTNetConfigure.shared.HTTPEvaluators = ["192.168.11.147"]
+        
+        /// codable
+        UserNetManger.userInfo(usrid: "123").map { (json) -> UserInfo? in
+            return (self.toModel(UserInfo.self, value: json))
+        }.subscribe { (user) in
+            print(user?.message ?? "")
+        } onError: { (error) in
+            print(error.localizedDescription)
+        } onCompleted: {
+            print("完成")
+        } onDisposed: {
+            print("销毁")
+        }.disposed(by: rx.disposeBag)
+        
+        /// json
+        UserNetManger.userInfo(usrid: "123").subscribe { (json) in
+            print(json)
+        } onError: { (error) in
+            print(error.localizedDescription)
+        } onCompleted: {
+            print("完成")
+        } onDisposed: {
+            print("销毁")
+        }.disposed(by: rx.disposeBag)
+        
+```
