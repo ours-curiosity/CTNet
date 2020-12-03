@@ -9,6 +9,7 @@ import Foundation
 
 public class CTNet{
     
+    /// cacheID 缓存ID，如果有缓存，则根据缓存ID拿取，没有返回空，同时也是本次缓存的ID
     public static func request(url:String,
                         method: CTNetRequestMethod,
                         parameters: [String: Any],

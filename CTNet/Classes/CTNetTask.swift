@@ -99,6 +99,9 @@ class CTNetTask:Operation{
                 CTNetLog.log("\(json)")
                 if let result = json as? [String: Any]{
                     self.netCallBack(result, self.id)
+                    if let myCacheID = self.cacheID{
+                        CTNetAPICache.shared.set(id: myCacheID, dict: result)
+                    }
                 }else{
                     self.netCallBack(["error":"格式非标准json","errorCode": -1234], self.id)
                 }

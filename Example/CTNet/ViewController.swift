@@ -72,13 +72,29 @@ struct UserInfo:Codable {
 }
 
 class UserNetManger:NetBaseManger{
+    
+    enum URL:String{
+        case userInfo = "/ping"
+    }
+
+    
     static func userInfo(usrid:String)->Observable<[String: Any]>{
-        return request(parameters: ["id":usrid], url: "/ping", cacheID: "/ping", method: .get)
+        
+        return request(url: URL.userInfo.rawValue,
+                       method: .post,
+                       parameters: ["id":usrid],
+                       cacheID: "yesterday")
     }
 }
 
 class NetBaseManger{
-    static func request(parameters:[String:Any],url:String,cacheID:String,method:CTNetRequestMethod = .post)->Observable<[String: Any]>{
+    ///cacheID 缓存ID，如果有缓存，则根据缓存ID拿取，没有返回空，同时也是本次缓存的ID
+    static func request(url:String,
+                        method:CTNetRequestMethod = .post,
+                        parameters:[String:Any],
+                        cacheID:String)
+    ->Observable<[String: Any]>{
+        
         let observable: Observable<[String: Any]> = Observable.create { observable in
             CTNet.request(url: url, method: method, parameters: [:], level: .high, cacheID: cacheID) { (jsonDict) in
                 if var myJsonDict = jsonDict{
