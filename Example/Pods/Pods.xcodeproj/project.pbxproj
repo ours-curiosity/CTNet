@@ -23,7 +23,7 @@
 		2ED55AB207F984ABC94FDD3C583943CF /* CTNetTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C58E04AAE5320A672C0DB62565F24 /* CTNetTask.swift */; };
 		31B1E2C9FC5DF7B7BE9350E5E8F518CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC44BC108255F6766BF5383BF088F46 /* Foundation.framework */; };
 		381FF05F8B4F611EE9C2FDBE4457BB89 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF72312136F76CCB5AC50BCDD37ED4A2 /* SessionDelegate.swift */; };
-		44C852A225788AE700BD11E4 /* CTNetAPICache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C852A125788AE700BD11E4 /* CTNetAPICache.swift */; };
+		44C852AF25789BAF00BD11E4 /* CTNetAPICache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C852AE25789BAF00BD11E4 /* CTNetAPICache.swift */; };
 		45B8CC1C61E7A0BB28CFA8CE7C12FEBC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0440F4381D065FED6264EFBCDB7960 /* MultipartFormData.swift */; };
 		476D5F33E25386C60D6BD75C4FA97C67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC44BC108255F6766BF5383BF088F46 /* Foundation.framework */; };
 		47FDBBBD2704901588C3A7C56BBC502D /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B13480173106997D3F6538CDE3CD /* ServerTrustEvaluation.swift */; };
@@ -110,7 +110,7 @@
 		3DDEAF5CEAB549A05FB31E6E90D1A74C /* CTNetTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNetTest.swift; path = CTNet/Classes/CTNetTest.swift; sourceTree = "<group>"; };
 		401A0C3C3516540407583753D10DEB2B /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		4388F96485F322CF010F9CA6AF089C46 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
-		44C852A125788AE700BD11E4 /* CTNetAPICache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTNetAPICache.swift; sourceTree = "<group>"; };
+		44C852AE25789BAF00BD11E4 /* CTNetAPICache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTNetAPICache.swift; path = CTNet/Classes/CTNetAPICache.swift; sourceTree = "<group>"; };
 		4591D5844289F02F52985F30FFDA6BB5 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
 		47CB8C3C9ED09F4A3A08CE85F55CBB7B /* CTNetTaskRetryManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTNetTaskRetryManager.swift; path = CTNet/Classes/CTNetTaskRetryManager.swift; sourceTree = "<group>"; };
 		48EB71E613D0570AE7CA262AD350C08D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -333,10 +333,10 @@
 				0DD1AAABE4990070B81F3EA78498705B /* CTNetLog.swift */,
 				C95AB8124DA134DC66DEEB5D9F12A996 /* CTNetSupport.swift */,
 				048C58E04AAE5320A672C0DB62565F24 /* CTNetTask.swift */,
+				44C852AE25789BAF00BD11E4 /* CTNetAPICache.swift */,
 				D5279D783D8E827548A073E3D14F7DDD /* CTNetTaskManager.swift */,
 				47CB8C3C9ED09F4A3A08CE85F55CBB7B /* CTNetTaskRetryManager.swift */,
 				3DDEAF5CEAB549A05FB31E6E90D1A74C /* CTNetTest.swift */,
-				44C852A125788AE700BD11E4 /* CTNetAPICache.swift */,
 				44E8BF8AB8A324F7DD26B3068C75A805 /* Pod */,
 				06BA9580526824128BDB4E93BCD32E72 /* Support Files */,
 			);
@@ -577,7 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44C852A225788AE700BD11E4 /* CTNetAPICache.swift in Sources */,
+				44C852AF25789BAF00BD11E4 /* CTNetAPICache.swift in Sources */,
 				D6A74D95F68B6496A9E98562F52F0232 /* CTNet-dummy.m in Sources */,
 				FB60F4688EDC584514ABF472F15D9B8A /* CTNet.swift in Sources */,
 				06BB4323323D764B10B360C06865E95E /* CTNetConfigure.swift in Sources */,
