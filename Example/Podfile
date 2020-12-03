@@ -7,4 +7,11 @@ source 'https://github.com/ours-curiosity/CTSpecs'
 target 'CTNet_Example' do
   pod 'CTNet', :path => '../'
 
+  # Rx
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'       # UITableView 和 UICollectionView 数据源
+  pod 'NSObject+Rx'         # https://github.com/RxSwiftCommunity/NSObject-Rx
+    
+    
 end

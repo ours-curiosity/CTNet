@@ -25,3 +25,24 @@ extension String{
     }
 
 }
+extension String {
+    var netURL:URL?{
+        return URL(string: self)
+    }
+    var localURL:URL?{
+        return URL(fileURLWithPath: self, isDirectory: true)
+    }
+}
+extension Dictionary{
+    func toData()->Data?{
+        let data = try? JSONSerialization.data(withJSONObject: self, options: [])
+        return data
+    }
+}
+extension Data{
+    func toDictionary()->Dictionary<String, Any>?{
+        let json = try? JSONSerialization.jsonObject(with: self, options: .mutableContainers)
+        let dict = json as! Dictionary<String, Any>
+        return dict
+    }
+}

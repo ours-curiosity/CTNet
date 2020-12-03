@@ -13,8 +13,10 @@ public class CTNet{
                         method: CTNetRequestMethod,
                         parameters: [String: Any],
                         level:Operation.QueuePriority = .normal,
-                        callBack: @escaping ((_ data:[String: Any]?,_ error:CTNetError?)->())){
-        CTNetTaskManager.shared.request(url: url, method: method, parameters: parameters, level: level, callBack: callBack)
+                        cacheID:String?,
+                        cacheCallBack: ((_ data:[String: Any]?)->())?,
+                        netCallBack: @escaping ((_ data:[String: Any]?,_ error:CTNetError?)->())){
+        CTNetTaskManager.shared.request(url: url, method: method, parameters: parameters, level: level, cacheID:cacheID, cacheCallBack:cacheCallBack,netCallBack: netCallBack)
     }
     
 

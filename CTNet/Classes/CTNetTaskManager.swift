@@ -25,13 +25,17 @@ public class CTNetTaskManager{
                  method: CTNetRequestMethod,
                  parameters: [String: Any],
                  level:Operation.QueuePriority,
-                 callBack: @escaping ((_ data:[String: Any]?,_ error:CTNetError?)->())){
+                 cacheID:String?,
+                 cacheCallBack: ((_ data:[String: Any]?)->())?,
+                 netCallBack: @escaping ((_ data:[String: Any]?,_ error:CTNetError?)->())){
         
         let task = generateTask(url: url,
                                 method: method,
                                 parameters: parameters,
                                 level:level,
-                                callBack: callBack)
+                                cacheID:cacheID,
+                                cacheCallBack: cacheCallBack,
+                                netCallBack: netCallBack)
         tasks.append(task)
         myQueue.addOperation(task)
     }
@@ -42,20 +46,22 @@ public class CTNetTaskManager{
                               method: CTNetRequestMethod,
                               parameters: [String: Any],
                               level:Operation.QueuePriority,
-                              callBack: @escaping ((_ data:[String: Any]?,
-                                                    _ error:CTNetError?)->()))
+                              cacheID:String?,
+                              cacheCallBack: ((_ data:[String: Any]?)->())?,
+                              netCallBack: @escaping ((_ data:[String: Any]?,
+                                                       _ error:CTNetError?)->()))
     -> CTNetTask{
         
         let totalURL = CTNetConfigure.shared.host + CTNetConfigure.shared.port + url
-        let task = CTNetTask(url: totalURL, method: method, parameters: parameters,level: level, callBack: { (jsonDict, taskID)in
+        let task = CTNetTask(url: totalURL, method: method, parameters: parameters,level: level, cacheID: cacheID, cacheCallBack: cacheCallBack, netCallBack: { (jsonDict, taskID)in
             self.removeTask(taskID: taskID)
             if let errorMsg = jsonDict["errorMsg"] as? String {
                 if let code = jsonDict["errorCode"] as? Int{
                     let error = CTNetError(msg: errorMsg, code: code)
-                    callBack(nil,error)
+                    netCallBack(nil,error)
                 }
             }else{
-                callBack(jsonDict,nil)
+                netCallBack(jsonDict,nil)
             }
         })
         return task

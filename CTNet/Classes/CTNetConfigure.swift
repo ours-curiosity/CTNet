@@ -18,7 +18,7 @@ public class CTNetConfigure{
     public var headers: [String:String] = [:]
     
     public var debug = true
-    
+    public var cachePath = NSHomeDirectory() + "/Documents/APIJsonCache/"
     /// http 验证赦免名单
     public var HTTPEvaluators = [""]
     

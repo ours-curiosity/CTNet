@@ -24,7 +24,8 @@ public enum CTNetRequestMethod{
 class CTNetTask:Operation{
     var id:String
     var url:String
-    var callBack:((_ data:[String: Any],_ taskID:String)->())
+    var netCallBack:((_ data:[String: Any],_ taskID:String)->())
+    var cacheID:String?
     var level:Operation.QueuePriority = .normal
     
     private var request:DataRequest?
@@ -64,9 +65,16 @@ class CTNetTask:Operation{
          method: CTNetRequestMethod,
          parameters: [String: Any],
          level:Operation.QueuePriority = .normal,
-         callBack: @escaping ((_ data:[String: Any],_ taskID:String)->())) {
+         cacheID:String?,
+         cacheCallBack: ((_ data:[String: Any]?)->())?,
+         netCallBack: @escaping ((_ data:[String: Any],_ taskID:String)->())) {
+        
         self.url = url
-        self.callBack = callBack
+        if let myCacheID = cacheID{
+            cacheCallBack?(APICache.shared.get(id: myCacheID))
+        }
+        self.netCallBack = netCallBack
+        self.cacheID = cacheID
         self.method = method
         self.myMethod = method.map()
         self.parameters = parameters
@@ -90,9 +98,9 @@ class CTNetTask:Operation{
                 //打印JSON数据
                 CTNetLog.log("\(json)")
                 if let result = json as? [String: Any]{
-                    self.callBack(result, self.id)
+                    self.netCallBack(result, self.id)
                 }else{
-                    self.callBack(["error":"格式非标准json","errorCode": -1234], self.id)
+                    self.netCallBack(["error":"格式非标准json","errorCode": -1234], self.id)
                 }
                 
             case .failure(let error):
@@ -101,7 +109,7 @@ class CTNetTask:Operation{
                 if CTNetTaskRetryManager.shared.retry(taskID: self.id){
                     self.autoRequest()
                 }else{
-                    self.callBack(["errorMsg":error.localizedDescription,"errorCode":error.responseCode ?? -1], self.id)
+                    self.netCallBack(["errorMsg":error.localizedDescription,"errorCode":error.responseCode ?? -1], self.id)
                 }
             }
         }
