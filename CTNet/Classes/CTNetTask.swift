@@ -71,7 +71,7 @@ class CTNetTask:Operation{
         
         self.url = url
         if let myCacheID = cacheID{
-            cacheCallBack?(APICache.shared.get(id: myCacheID))
+            cacheCallBack?(CTNetAPICache.shared.get(id: myCacheID))
         }
         self.netCallBack = netCallBack
         self.cacheID = cacheID

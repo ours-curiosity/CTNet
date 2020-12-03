@@ -6,12 +6,11 @@
 //
 
 import Foundation
-typealias APICache = CTNetAPICache
 
-class CTNetAPICache{
+public class CTNetAPICache{
     /// json的存储位置 后期可以根据不同的模块区分缓存位置 注意设置icloud防同步
-    let apiDirectory: String = CTNetConfigure.shared.cachePath
-    static let shared = CTNetAPICache()
+    public let apiDirectory: String = CTNetConfigure.shared.cachePath
+    public static let shared = CTNetAPICache()
     /// 单例模式初始化
     private init(){
         var isDir: ObjCBool = true
@@ -21,13 +20,13 @@ class CTNetAPICache{
         }
     }
     /// 数据清空，当用户退出的时候
-    func clear(){
+    public func clear(){
         if let url = apiDirectory.localURL{
             try? FileManager.default.removeItem(at: url)
         }
     }
     /// 获取接口数据
-    func get(id:String)->[String:Any]?{
+    public func get(id:String)->[String:Any]?{
         let name = id.md5
         let filePath = apiDirectory + name
         if let url = filePath.localURL{
@@ -38,7 +37,7 @@ class CTNetAPICache{
         return nil
     }
     /// 缓存接口数据
-    func set(id:String,dict:[String:Any]){
+    public func set(id:String,dict:[String:Any]){
         let name = id.md5
         let filePath = apiDirectory + name
         let data = dict.toData()
