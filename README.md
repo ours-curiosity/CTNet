@@ -5,11 +5,19 @@
 [![License](https://img.shields.io/cocoapods/l/CTNet.svg?style=flat)](https://cocoapods.org/pods/CTNet)
 [![Platform](https://img.shields.io/cocoapods/p/CTNet.svg?style=flat)](https://cocoapods.org/pods/CTNet)
 
+这是一个可以指定缓存、重试、优先级的轻量级网络库，基于Alamofire，容易扩展。
+
+建议配合rx使用，Demo中展示了使用rx的优美指出。
+
+也可以不用rx，因为本身和rx没有什么关系。
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+Swift 5.0+
 
 ## Installation
 
@@ -28,6 +36,21 @@ tliens, maninios@163.com
 
 CTNet is available under the MIT license. See the LICENSE file for more info.
 ## 使用
+CTNetConfigure 是CTNet的配置中心，可以之指定如下内容：
+
+- 端口
+- host
+- 超市时长
+- 重试次数
+- 是否自动缓存
+- 最大并发数
+- header自定义
+- ssl赦免名单
+- 缓存位置
+
+CTNet 是整个请求的入口，可以指定以下内容
+
+CTNetTask 是请求的具体任务，是Operation的子类，意味着，你可以轻易的使用OperationQueue对他进行管理。
 
 具体查看Demo
 
@@ -63,3 +86,43 @@ CTNet is available under the MIT license. See the LICENSE file for more info.
         }.disposed(by: rx.disposeBag)
         
 ```
+
+## NetBaseManger
+
+```
+class NetBaseManger{
+    ///cacheID 缓存ID，如果有缓存，则根据缓存ID拿取，没有返回空，同时也是本次缓存的ID
+    static func request(url:String,
+                        method:CTNetRequestMethod = .post,
+                        parameters:[String:Any],
+                        cacheID:String)
+    ->Observable<[String: Any]>{
+        
+        let observable: Observable<[String: Any]> = Observable.create { observable in
+            CTNet.request(url: url, method: method, parameters: [:], level: .high, cacheID: cacheID) { (jsonDict) in
+                if var myJsonDict = jsonDict{
+                    myJsonDict["isCache"] = true
+                    observable.onNext(myJsonDict)
+                }
+            } netCallBack: { (jsonDict, error) in
+                if let _error = error{
+                    let myError = NSError(domain: _error.msg, code: _error.code, userInfo: nil)
+                    observable.onError(myError)
+                }else{
+                    if let myJsonDict = jsonDict{
+                        observable.onNext(myJsonDict)
+                    }else{
+                        let myError = NSError(domain: "data is error", code: -1300, userInfo: nil)
+                        observable.onError(myError)
+                    }
+                }
+            }
+            return Disposables.create()
+        }
+        return observable
+    }
+}
+
+```
+
+
