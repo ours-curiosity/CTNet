@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/CTNet.svg?style=flat)](https://cocoapods.org/pods/CTNet)
 [![Platform](https://img.shields.io/cocoapods/p/CTNet.svg?style=flat)](https://cocoapods.org/pods/CTNet)
 
+![img](https://github.com/ours-curiosity/CTNet/blob/main/CTNet.png)
 这是一个可以指定缓存、重试、优先级的轻量级网络库，基于Alamofire，容易扩展。
 
 建议配合rx使用，Demo中展示了使用rx的优美指出。
