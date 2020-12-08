@@ -23,37 +23,56 @@ public class CTNetTaskManager{
     /// 请求网络数据
     func request(url:String,
                  method: CTNetRequestMethod,
+                 header: [String:String],
                  parameters: [String: Any],
                  level:Operation.QueuePriority,
+                 timeout: Double?,
                  cacheID:String?,
+                 autoCache:Bool,
                  cacheCallBack: ((_ data:[String: Any]?)->())?,
-                 netCallBack: @escaping ((_ data:[String: Any]?,_ error:CTNetError?)->())){
+                 netCallBack: @escaping ((_ data:[String: Any]?,_ error:CTNetError?)->())) -> CTNetTask{
         
         let task = generateTask(url: url,
                                 method: method,
+                                header: header,
                                 parameters: parameters,
                                 level:level,
+                                timeout: timeout,
                                 cacheID:cacheID,
+                                autoCache: autoCache,
                                 cacheCallBack: cacheCallBack,
                                 netCallBack: netCallBack)
         tasks.append(task)
         myQueue.addOperation(task)
+        return task
     }
     
     
     /// 生成一个新的任务
     private func generateTask(url:String,
                               method: CTNetRequestMethod,
+                              header: [String:String]?,
                               parameters: [String: Any],
                               level:Operation.QueuePriority,
+                              timeout: Double?,
                               cacheID:String?,
+                              autoCache:Bool,
                               cacheCallBack: ((_ data:[String: Any]?)->())?,
                               netCallBack: @escaping ((_ data:[String: Any]?,
                                                        _ error:CTNetError?)->()))
     -> CTNetTask{
         
         let totalURL = CTNetConfigure.shared.host + CTNetConfigure.shared.port + url
-        let task = CTNetTask(url: totalURL, method: method, parameters: parameters,level: level, cacheID: cacheID, cacheCallBack: cacheCallBack, netCallBack: { (jsonDict, taskID)in
+        let task = CTNetTask(url: totalURL,
+                             method: method,
+                             header: header,
+                             parameters: parameters,
+                             level: level,
+                             timeout: timeout,
+                             cacheID: cacheID,
+                             autoCache: autoCache,
+                             cacheCallBack: cacheCallBack,
+                             netCallBack: { (jsonDict, taskID)in
             self.removeTask(taskID: taskID)
             if let errorMsg = jsonDict["errorMsg"] as? String {
                 if let code = jsonDict["errorCode"] as? Int{

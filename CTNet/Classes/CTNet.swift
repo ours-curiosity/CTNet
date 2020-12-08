@@ -12,12 +12,25 @@ public class CTNet{
     /// cacheID 缓存ID，如果有缓存，则根据缓存ID拿取，没有返回空，同时也是本次缓存的ID
     public static func request(url:String,
                         method: CTNetRequestMethod,
+                        header: [String:String] = [:],
                         parameters: [String: Any],
                         level:Operation.QueuePriority = .normal,
+                        timeout: Double?,
                         cacheID:String?,
+                        autoCache:Bool,
                         cacheCallBack: ((_ data:[String: Any]?)->())?,
-                        netCallBack: @escaping ((_ data:[String: Any]?,_ error:CTNetError?)->())){
-        CTNetTaskManager.shared.request(url: url, method: method, parameters: parameters, level: level, cacheID:cacheID, cacheCallBack:cacheCallBack,netCallBack: netCallBack)
+                        netCallBack: @escaping ((_ data:[String: Any]?,_ error:CTNetError?)->())) -> CTNetTask{
+        
+        return CTNetTaskManager.shared.request(url: url,
+                                               method: method,
+                                               header: header,
+                                               parameters: parameters,
+                                               level:level,
+                                               timeout: timeout,
+                                               cacheID:cacheID,
+                                               autoCache: autoCache,
+                                               cacheCallBack:cacheCallBack,
+                                               netCallBack: netCallBack)
     }
     
 

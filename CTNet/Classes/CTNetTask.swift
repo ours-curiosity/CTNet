@@ -21,17 +21,20 @@ public enum CTNetRequestMethod{
         }
     }
 }
-class CTNetTask:Operation{
+public class CTNetTask:Operation{
     var id:String
     var url:String
     var netCallBack:((_ data:[String: Any],_ taskID:String)->())
     var cacheID:String?
     var level:Operation.QueuePriority = .normal
-    
+    var autoCache = false
+    private var header: [String:String] = CTNetConfigure.shared.headers
     private var request:DataRequest?
     private var myMethod:HTTPMethod
     private var method: CTNetRequestMethod
     private var parameters:[String: Any]
+    private var timeout:Double = CTNetConfigure.shared.timeout
+    
     lazy private var session:Alamofire.Session = {
         let configuration = URLSessionConfiguration.default
         configuration.headers = httpHeaders
@@ -43,7 +46,6 @@ class CTNetTask:Operation{
                 evaluators[key] = DisabledTrustEvaluator()
             }
         }
-        
         if evaluators.isEmpty{
             let session = Alamofire.Session(configuration: configuration)
             return session
@@ -53,9 +55,9 @@ class CTNetTask:Operation{
             return session
         }
     }()
-    private var httpHeaders:HTTPHeaders = {
+    lazy private var httpHeaders:HTTPHeaders = {
         var headers: [HTTPHeader] = []
-        for item in CTNetConfigure.shared.headers{
+        for item in self.header{
             let header = HTTPHeader(name: item.key, value: item.value)
         }
         return HTTPHeaders(headers)
@@ -63,15 +65,25 @@ class CTNetTask:Operation{
 
     init(url: String,
          method: CTNetRequestMethod,
+         header: [String:String]?,
          parameters: [String: Any],
          level:Operation.QueuePriority = .normal,
+         timeout:Double?,
          cacheID:String?,
+         autoCache:Bool,
          cacheCallBack: ((_ data:[String: Any]?)->())?,
          netCallBack: @escaping ((_ data:[String: Any],_ taskID:String)->())) {
         
         self.url = url
         if let myCacheID = cacheID{
             cacheCallBack?(CTNetAPICache.shared.get(id: myCacheID))
+        }else{
+            if autoCache{
+                cacheCallBack?(CTNetAPICache.shared.get(id: url))
+            }
+        }
+        if header != nil{
+            self.header = header!
         }
         self.netCallBack = netCallBack
         self.cacheID = cacheID
@@ -80,9 +92,12 @@ class CTNetTask:Operation{
         self.parameters = parameters
         self.id = url.md5
         self.level = level
+        if timeout != nil {
+            self.timeout = timeout!
+        }
         super.init()
     }
-    override func main() {
+    public override func main() {
         if !isCancelled{
             CTNetTaskRetryManager.shared.add(taskID: self.id, times: CTNetConfigure.shared.retryTimes)
             autoRequest()
@@ -101,9 +116,13 @@ class CTNetTask:Operation{
                     self.netCallBack(result, self.id)
                     if let myCacheID = self.cacheID{
                         CTNetAPICache.shared.set(id: myCacheID, dict: result)
+                    }else{
+                        if self.autoCache == true{
+                            CTNetAPICache.shared.set(id: self.url, dict: result)
+                        }
                     }
                 }else{
-                    self.netCallBack(["error":"格式非标准json","errorCode": -1234], self.id)
+                    self.netCallBack(["errorMsg":"格式非标准json","errorCode": -13840], self.id)
                 }
                 
             case .failure(let error):

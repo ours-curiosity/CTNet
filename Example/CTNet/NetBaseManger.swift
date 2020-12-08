@@ -19,7 +19,14 @@ class NetBaseManger{
     ->Observable<[String: Any]>{
         
         let observable: Observable<[String: Any]> = Observable.create { observable in
-            CTNet.request(url: url, method: method, parameters: [:], level: .high, cacheID: cacheID) { (jsonDict) in
+            CTNet.request(url: url,
+                          method: method,
+                          header: [:],
+                          parameters: [:],
+                          level: .high,
+                          timeout: 20,
+                          cacheID: cacheID,
+                          autoCache: false) { (jsonDict) in
                 if var myJsonDict = jsonDict{
                     myJsonDict["isCache"] = true
                     observable.onNext(myJsonDict)
