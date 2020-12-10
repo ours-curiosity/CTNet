@@ -106,7 +106,7 @@ public class CTNetTask:Operation{
     }
     /// 网络请求
     func autoRequest(){
-        request = session.request(url, method: myMethod, parameters: parameters,headers: httpHeaders).responseJSON { [weak self](response) in
+        request = session.request(url, method: myMethod, parameters: parameters,encoding: JSONEncoding.default, headers: httpHeaders).responseJSON { [weak self](response) in
             guard let self = self else {return}
             switch response.result {
             case .success(let json):
