@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public struct CTNetError
+public struct CTNetError:Error
 {
     public var msg:String
     public var code:Int
@@ -73,16 +73,19 @@ public class CTNetTaskManager{
                              autoCache: autoCache,
                              cacheCallBack: cacheCallBack,
                              netCallBack: { (jsonDict, taskID)in
-            self.removeTask(taskID: taskID)
-            if let errorMsg = jsonDict["errorMsg"] as? String {
-                if let code = jsonDict["errorCode"] as? Int{
-                    let error = CTNetError(msg: errorMsg, code: code)
-                    netCallBack(nil,error)
-                }
-            }else{
-                netCallBack(jsonDict,nil)
-            }
-        })
+                                self.removeTask(taskID: taskID)
+                                if let code = jsonDict["errCode"] as? Int{
+                                    if code == 0{
+                                        netCallBack(jsonDict,nil)
+                                    }else{
+                                        let errorMsg = jsonDict["errMsg"] as? String ?? ""
+                                        let error = CTNetError(msg: errorMsg, code: code)
+                                        netCallBack(jsonDict,error)
+                                    }
+                                }else{
+                                    netCallBack(jsonDict,nil)
+                                }
+                             })
         return task
     }
     /// 删除任务
