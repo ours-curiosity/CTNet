@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CTNet'
-  s.version          = '0.3.1'
+  s.version          = '0.3.2'
   s.summary          = 'A short description of CTNet.'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
+  s.description      = <<-DESCs
 TODO: Add long description of the pod here.
                        DESC
 

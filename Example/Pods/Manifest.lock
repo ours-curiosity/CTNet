@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.4.0)
-  - CTNet (0.2.6):
+  - CTNet (0.3.1):
     - Alamofire (~> 5.4.0)
   - Differentiator (4.0.1)
   - "NSObject+Rx (5.1.0)":
@@ -39,7 +39,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
-  CTNet: 35d916e563294c12509669076b9f7aedef99a5d7
+  CTNet: b9be7d7237f66640bb07e77376cbeb51daabd64e
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
