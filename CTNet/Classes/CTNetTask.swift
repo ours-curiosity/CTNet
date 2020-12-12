@@ -59,7 +59,7 @@ public class CTNetTask:Operation{
         var headers: [HTTPHeader] = []
         for item in self.header{
             let header = HTTPHeader(name: item.key, value: item.value)
-            headers.append(headers)
+            headers.append( header)
         }
         return HTTPHeaders(headers)
     }()
