@@ -6,10 +6,14 @@
 //
 
 import Foundation
-public struct CTNetError:Error
-{
+public struct CTNetError: Error {
     public var msg:String
     public var code:Int
+    
+    public init(msg: String, code: Int) {
+        self.msg = msg
+        self.code = code
+    }
 }
 public class CTNetTaskManager{
     
@@ -98,5 +102,5 @@ public class CTNetTaskManager{
             }
         }
     }
-
+    
 }
