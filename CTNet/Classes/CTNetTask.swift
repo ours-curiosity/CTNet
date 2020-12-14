@@ -83,7 +83,7 @@ public class CTNetTask:Operation{
                 cacheCallBack?(CTNetAPICache.shared.get(id: url))
             }
         }
-        if header != nil{
+        if let _header = header, _header.count != 0{
             self.header = header!
         }
         self.netCallBack = netCallBack
