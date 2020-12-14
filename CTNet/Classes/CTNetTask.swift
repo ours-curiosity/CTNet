@@ -123,7 +123,7 @@ public class CTNetTask:Operation{
                         }
                     }
                 }else{
-                    self.netCallBack(["errorMsg":"json is invalid","errorCode": -13840], self.id)
+                    self.netCallBack(["errMsg":"json is invalid","errCode": -13840], self.id)
                 }
                 
             case .failure(let error as NSError):
@@ -132,7 +132,7 @@ public class CTNetTask:Operation{
                 if CTNetTaskRetryManager.shared.retry(taskID: self.id){
                     self.autoRequest()
                 }else{
-                    self.netCallBack(["errorMsg":error.domain,"errorCode":error.code], self.id)
+                    self.netCallBack(["errMsg":error.domain,"errCode":error.code], self.id)
                 }
             }
         }
