@@ -78,17 +78,13 @@ public class CTNetTaskManager{
                              cacheCallBack: cacheCallBack,
                              netCallBack: { (jsonDict, taskID)in
                                 self.removeTask(taskID: taskID)
+                                var error : CTNetError?
                                 if let code = jsonDict["errCode"] as? Int{
-                                    if code == 0{
-                                        netCallBack(jsonDict,nil)
-                                    }else{
-                                        let errorMsg = jsonDict["errMsg"] as? String ?? ""
-                                        let error = CTNetError(msg: errorMsg, code: code)
-                                        netCallBack(jsonDict,error)
-                                    }
-                                }else{
-                                    netCallBack(jsonDict,nil)
+                                    let errorMsg = jsonDict["errMsg"] as? String ?? ""
+                                    error = CTNetError(msg: errorMsg, code: code)
+                                    netCallBack(jsonDict,error)
                                 }
+                                netCallBack(jsonDict,error)
                              })
         return task
     }
