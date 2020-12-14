@@ -79,7 +79,7 @@ public class CTNetTaskManager{
                              netCallBack: { (jsonDict, taskID)in
                                 self.removeTask(taskID: taskID)
                                 var error : CTNetError?
-                                if let code = jsonDict["errCode"] as? Int{
+                                if let code = jsonDict["errCode"] as? Int, code != 0{
                                     let errorMsg = jsonDict["errMsg"] as? String ?? ""
                                     error = CTNetError(msg: errorMsg, code: code)
                                     netCallBack(jsonDict,error)

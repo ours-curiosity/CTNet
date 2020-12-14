@@ -123,16 +123,16 @@ public class CTNetTask:Operation{
                         }
                     }
                 }else{
-                    self.netCallBack(["errorMsg":"格式非标准json","errorCode": -13840], self.id)
+                    self.netCallBack(["errorMsg":"json is invalid","errorCode": -13840], self.id)
                 }
                 
-            case .failure(let error):
+            case .failure(let error as NSError):
                 CTNetLog.log("\(error.localizedDescription)")
                 /// 重试
                 if CTNetTaskRetryManager.shared.retry(taskID: self.id){
                     self.autoRequest()
                 }else{
-                    self.netCallBack(["errorMsg":error.localizedDescription,"errorCode":error.responseCode ?? -1], self.id)
+                    self.netCallBack(["errorMsg":error.domain,"errorCode":error.code], self.id)
                 }
             }
         }
