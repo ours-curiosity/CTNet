@@ -1,6 +1,0 @@
-framework module Pods_CTNet_Example {
-  umbrella header "Pods-CTNet_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
