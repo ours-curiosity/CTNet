@@ -100,7 +100,6 @@ public class CTNetTask:Operation{
     }
     public override func main() {
         if !isCancelled{
-            CTNetTaskRetryManager.shared.add(taskID: self.id, times: CTNetConfigure.shared.retryTimes)
             autoRequest()
             CTNetLog.log("优先级",level.rawValue)
         }

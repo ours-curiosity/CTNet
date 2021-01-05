@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CTNet'
-  s.version          = '0.3.5.2'
+  s.version          = '0.3.5.3'
   s.summary          = 'A short description of CTNet.'
 
 # This description is used to generate tags and improve search results.

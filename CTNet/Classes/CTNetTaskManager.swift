@@ -46,6 +46,7 @@ public class CTNetTaskManager{
                                 autoCache: autoCache,
                                 cacheCallBack: cacheCallBack,
                                 netCallBack: netCallBack)
+        CTNetTaskRetryManager.shared.add(taskID: task.id, times: CTNetConfigure.shared.retryTimes)
         tasks.append(task)
         myQueue.addOperation(task)
         return task
