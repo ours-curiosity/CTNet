@@ -87,6 +87,7 @@ public class CTNetTask:Operation{
             self.header = header!
         }
         self.netCallBack = netCallBack
+        self.autoCache = autoCache
         self.cacheID = cacheID
         self.method = method
         self.myMethod = method.map()
