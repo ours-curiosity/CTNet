@@ -107,13 +107,13 @@ public class CTNetTask:Operation{
     }
     /// 网络请求
     func autoRequest(){
-        CTNetLog.log("【CTNet】[\(url)][🚀]\n[params]:\n\(parameters)\n[header]:\n\(httpHeaders)")
+        CTNetLog.log("\n【CTNet】[\(url)][🚀]\n[params:\(parameters)]\n[header:\(httpHeaders)]\n")
         request = session.request(url, method: myMethod, parameters: parameters,encoding: JSONEncoding.default, headers: httpHeaders).responseJSON { [weak self](response) in
             guard let self = self else {return}
             switch response.result {
             case .success(let json):
                 //打印JSON数据
-                CTNetLog.log("【CTNet】[\(response.request?.url?.absoluteString ?? "")][success✅]\n\(json)")
+                CTNetLog.log("\n【CTNet】[\(response.request?.url?.absoluteString ?? "")][success✅]\n[response:\(json)]\n")
                 if let result = json as? [String: Any]{
                     self.netCallBack(result, self.id)
                     if let myCacheID = self.cacheID{
@@ -128,7 +128,7 @@ public class CTNetTask:Operation{
                 }
                 
             case .failure(let error as NSError):
-                CTNetLog.log("【CTNet】[\(response.request?.url?.absoluteString ?? "")][fail❌]\n\(error.localizedDescription)")
+                CTNetLog.log("\n【CTNet】[\(response.request?.url?.absoluteString ?? "")][fail❌]\n[error:\(error.localizedDescription)]\n")
                 /// 重试
                 if CTNetTaskRetryManager.shared.retry(taskID: self.id){
                     self.autoRequest()
