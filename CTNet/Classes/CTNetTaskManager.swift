@@ -78,12 +78,13 @@ public class CTNetTaskManager{
                              autoCache: autoCache,
                              cacheCallBack: cacheCallBack,
                              netCallBack: { (jsonDict, taskID)in
-//                                self.removeTask(taskID: taskID)
+                                //                                self.removeTask(taskID: taskID)
                                 var error : CTNetError?
                                 if let code = jsonDict["errCode"] as? Int, code != 0{
                                     let errorMsg = jsonDict["errMsg"] as? String ?? ""
                                     error = CTNetError(msg: errorMsg, code: code)
                                     netCallBack(jsonDict,error)
+                                    self.checkErrorCodeListening(code: code, jsonDict: jsonDict)
                                 }
                                 netCallBack(jsonDict,error)
                              })
@@ -100,4 +101,13 @@ public class CTNetTaskManager{
         }
     }
     
+    /// 检查错误码
+    /// - Parameters:
+    ///   - code: 当前错误码
+    ///   - jsonDict: 当前返回的数据
+    private func checkErrorCodeListening(code: Int, jsonDict: [String: Any]?) {
+        if CTNetConfigure.shared.listeningErrorCode.contains(code) {
+            NotificationCenter.default.post(name: NSNotification.Name.CTNetErrorCodeListener, object: nil, userInfo: jsonDict)
+        }
+    }
 }

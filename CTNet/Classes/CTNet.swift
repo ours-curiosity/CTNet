@@ -7,6 +7,11 @@
 
 import Foundation
 
+public extension Notification.Name {// 接到需要监听的错误码时的通知
+    static let CTNetErrorCodeListener = Notification.Name.init("com.lfg.notification.CTNetErrorCodeListener")
+}
+
+
 public class CTNet{
     
     /// cacheID 缓存ID，如果有缓存，则根据缓存ID拿取，没有返回空，同时也是本次缓存的ID
