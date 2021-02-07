@@ -133,7 +133,7 @@ public class CTNetTask:Operation{
                 if CTNetTaskRetryManager.shared.retry(taskID: self.id){
                     self.autoRequest()
                 }else{
-                    self.netCallBack(["errMsg":error.domain,"errCode":error.code], self.id)
+                    self.netCallBack(["errMsg":"No connection","errCode":error.code], self.id)
                 }
             }
         }
