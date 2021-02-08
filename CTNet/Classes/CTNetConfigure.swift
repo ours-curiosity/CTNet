@@ -16,7 +16,7 @@ public class CTNetConfigure{
     public var headers: [String:String] = [:]
     public var debug = true
     public var cachePath = NSHomeDirectory() + "/Documents/APIJsonCache/"
-    public var listeningErrorCode: [Int] = [Int]()  // 监听的错误码，如果命中会以通知的形式发出
+    public var errorCodeHandler: ((_ code: Int, _ data: [String: Any]?)->())?  // 错误码的回调处理
     /// http 验证赦免名单
     public var HTTPEvaluators = [""]
     public static let shared:CTNetConfigure = {
