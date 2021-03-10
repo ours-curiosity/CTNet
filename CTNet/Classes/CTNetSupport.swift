@@ -42,7 +42,7 @@ extension Dictionary{
 extension Data{
     func toDictionary()->Dictionary<String, Any>?{
         let json = try? JSONSerialization.jsonObject(with: self, options: .mutableContainers)
-        let dict = json as! Dictionary<String, Any>
+        let dict = json as? Dictionary<String, Any>
         return dict
     }
 }
