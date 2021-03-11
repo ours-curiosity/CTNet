@@ -29,6 +29,14 @@ public class CTNetAPICache:NSObject{
             try? FileManager.default.removeItem(at: url)
         }
     }
+    /// 清空某个数据 id
+    public func clear(id:String){
+        let name = id.md5
+        let filePath = apiDirectory + name
+        if let url = filePath.localURL{
+            try? FileManager.default.removeItem(at: url)
+        }
+    }
     /// 获取接口数据
     public func get(id:String)->[String:Any]?{
         let name = id.md5
