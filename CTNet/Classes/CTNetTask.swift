@@ -128,11 +128,14 @@ public class CTNetTask:Operation{
                 }
                 
             case .failure(let error as NSError):
-                CTNetLog.log("\n【CTNet】[\(response.request?.url?.absoluteString ?? "")][fail❌]\n[error:\(error.localizedDescription)]\n")
                 /// 重试
                 if CTNetTaskRetryManager.shared.retry(taskID: self.id){
-                    self.autoRequest()
+                    /// 延迟重试，避免网络抖动
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                        self.autoRequest()
+                    }
                 }else{
+                    CTNetLog.log("\n【CTNet】[\(response.request?.url?.absoluteString ?? "")][fail❌]\n[error:\(error.localizedDescription)]\n")
                     self.netCallBack(["errMsg":"No connection","errCode":error.code], self.id)
                 }
             }
