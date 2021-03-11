@@ -6,13 +6,17 @@
 //
 
 import Foundation
-
-public class CTNetAPICache{
+@objcMembers
+public class CTNetAPICache:NSObject{
     /// json的存储位置 后期可以根据不同的模块区分缓存位置 注意设置icloud防同步
     public let apiDirectory: String = CTNetConfigure.shared.cachePath
     public static let shared = CTNetAPICache()
     /// 单例模式初始化
-    private init(){
+    private override init(){
+        super.init()
+        checkDir()
+    }
+    private func checkDir(){
         var isDir: ObjCBool = true
         let isExists = FileManager.default.fileExists(atPath: self.apiDirectory, isDirectory: &isDir)
         if !isExists {
@@ -38,6 +42,7 @@ public class CTNetAPICache{
     }
     /// 缓存接口数据
     public func set(id:String,dict:[String:Any]){
+        checkDir()
         let name = id.md5
         let filePath = apiDirectory + name
         let data = dict.toData()
