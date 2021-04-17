@@ -107,6 +107,7 @@ public class CTNetTask:Operation{
     }
     /// 网络请求
     func autoRequest(){
+        let start = Date().timeIntervalSince1970
         CTNetLog.log("\n【CTNet】[\(url)][🚀]\n[params:\(parameters)]\n[header:\(httpHeaders)]\n")
         request = session.request(url, method: myMethod, parameters: parameters,encoding: JSONEncoding.default, headers: httpHeaders).responseJSON { [weak self](response) in
             guard let self = self else {return}
@@ -114,6 +115,7 @@ public class CTNetTask:Operation{
             case .success(let json):
                 //打印JSON数据
                 CTNetLog.log("\n【CTNet】[\(response.request?.url?.absoluteString ?? "")][success✅]\n[response:\(json)]\n")
+                CTNetLog.log("接口花费时长: (秒)",Date().timeIntervalSince1970 - start,(response.request?.url?.absoluteString ?? ""))
                 if let result = json as? [String: Any]{
                     self.netCallBack(result, self.id)
                     if let myCacheID = self.cacheID{
